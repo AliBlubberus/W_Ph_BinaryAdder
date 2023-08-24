@@ -1,0 +1,37 @@
+%\documentclass[a4paper,12pt,ngerman,titlepage]{scrartcl}
+\documentclass[parskip = half*,numbers=noenddot,12pt]{scrartcl}
+\usepackage[ngerman]{babel}
+\usepackage[a4paper,margin=2cm,footskip=0.5cm]{geometry}
+\usepackage{nameref}
+\usepackage{wrapfig}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{siunitx}
+
+% OWN REFERENCING STYLE
+\newcommand\fancyref[1]{\textit{\ref{#1}.~\nameref{#1}}}
+
+\title{Binäraddierer - Historie und Realisierung}
+\subtitle{W-Seminar Physik - Historische Schaltungen Nachbauen}
+\author{Adrian Jüngling}
+
+\begin{document}
+	\bibliographystyle{IEEEtran}
+	
+	\maketitle
+	\newpage
+	\tableofcontents
+	\newpage
+	
+	\section{Einleitung}
+	\input{Einleitung}
+	
+	\section{Historie}
+	\input{Historie}
+	
+	\section{Funktionsweise und Realisierung}
+	\input{FunkUndReal}
+	
+	\newpage
+	\bibliography{quellen}
+\end{document}

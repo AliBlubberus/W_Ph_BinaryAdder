@@ -1,0 +1,48 @@
+\subsection{Binärsystem und binäre Logik} \label{BinarySystem}
+In \cite{konradz1z2} und \cite{bruderer2011konrad} ist zu erkennen, dass nahezu alle ersten Rechenmaschinen mit dem Binärsystem arbeiteten. Wie in \cite{zimmermann1998binary} beschrieben, findet dieses Zahlensystem auch in heutigen Computern Anwendung. Hierbei werden allerdings weder Relais, noch Elektronenröhren eingesetzt. Stattdessen benutzt man Transistoren, da diese unter anderem im mikroskopischem Maßstab angefertigt werden können. Dadurch sind moderne Prozessoren besonders platzsparend und leistungsstark. Die Transistoren agieren analog zu den damals verwendeten Relais als Schalter.\\\\
+Das Dezimalsystem (\glqq{}decem\grqq{} $\widehat{=}$ zehn) ist das konventionelle Zahlensystem, welches in der Mathematik benutzt wird. Hierbei kann jede Stelle einer Zahl einen von zehn möglichen Zuständen annehmen (0-9). Bei der Darstellung größerer Zahlen, muss auf zusätzliche Stellen zurückgegriffen werden. Jede Stelle einer Zahl im Dezimalsystem hat den zehnfachen Wert der jeweils rechten.\\\\
+Im Binärsystem (\glqq{}bi\grqq{} $\widehat{=}$ zwei) stehen für eine Stelle lediglich zwei Zustände zur Auswahl (0 und 1). Das darstellen der Zahl zwei im Binärsystem ist mit nur einer Stelle nicht möglich. Hier muss bereits die nächsthöhere verwendet werden. Die Zahl zwei im Binärsystem wird also als $10$ dargestellt. Erhöht man diese Zahl um den Wert $1$, so ergibt sich $11$. Führt man dies ein weiteres Mal fort, so findet in der ersten Stelle ein \glqq{}Überlauf\grqq{} statt. Das bedeutet, dass der maximale Zahlenbereich dieser Stelle überschritten wurde. Diese beginnt wieder bei null, und die jeweils linke Stelle wird um eins erhöht. Bei $11 + 1$ geschieht dies zweimal, es ergibt sich $100$.\\\\
+Jede Stelle einer Zahl im Binärsystem hat den zweifachen Wert der jeweils rechten. Übersetzt man eine Zahl vom Binärsystem zum Dezimalsystem, so betrachtet man alle Stellen mit dem Zustand $1$. Deren Wertigkeiten werden anschließend summiert. Die Binärzahl $1011$ entspricht also $1*8 + 0*4 + 1*2 + 1*1 = 11$ im Dezimalsystem.\\\\
+Die Addition zweier Zahlen im Binärsystem funktioniert ähnlich wie im Dezimalsystem. Es werden zunächst die ersten Stellen der beiden Zahlen addiert. Ereignet sich ein Überlauf, so wird eine weitere 1 zur nächsthöheren Stelle übertragen. Dieser Prozess setzt sich bis zur höchsten Stelle fort. Wie in \cite{zimmermann1998binary} zu sehen, ist der Binäraddierer ein elektronisches Bauteil, welches lediglich eine Stelle zweier Binärzahlen addieren kann. Jedoch können auch größere Zahlen summiert werden. Um beispielsweise zwei achtstellige Binärzahlen zu addieren, sind acht Binäraddierer nötig. Jedes dieser Bauteile ist für die Addition einer Stelle der beiden Zahlen zuständig.\\\\
+Ein Binäraddierer ist aus einzelnen Logikgattern zusammengesetzt. Diese sind kleine Schaltkreise, welche einfache Rechenoperationen mit binären Werten durchführen. Sie enthalten einen oder mehrere Ein- und Ausgabeanschlüsse. Die Funktionsweise eines Logikgatters wird, wie in \cite{rigotti2003digitale} gezeigt, mithilfe von Wahrheitstabellen veranschaulicht. Diese Tabellen zeigen die Zustände der Ausgabeanschlüsse in Abhängigkeit von denen der Eingabeanschlüsse.
+
+\subsection{UND-Gatter}
+\begin{figure}[h]
+	\centering
+	\hspace{1cm}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{A} & \textbf{B} & \textbf{Out} \\
+		\hline
+		0 & 0 & 0 \\
+		1 & 0 & 0 \\
+		0 & 1 & 0 \\
+		1 & 1 & 1 \\
+		\hline
+	\end{tabular}
+	\caption{Wahrheitstabelle für das logische UND-Gatter}
+\end{figure}
+Diese Wahrheitstabelle wurde aus \cite{rigotti2003digitale} entnommen. Sie zeigt die Funktionsweise des logischen UND-Gatters. Dieses besitzt zwei Eingabeanschlüsse (A und B), und einen Ausgabeanschluss (Out). Ein niedriges Spannungsniveau wird als $0$ dargestellt, ein hohes als $1$. Wie in \cite{neuser2008erstellung} zu sehen, können für diese beiden Zustände ebenso die Begriffe \glqq{}HIGH\grqq{} oder \glqq{}LOW\grqq{} verwendet werden.\\\\
+Die Tabelle zeigt, dass der Ausgabeanschluss nur dann auf HIGH liegt, wenn A und B ebenso auf HIGH gesetzt sind. Ist mindestens einer der beiden Eingabeanschlüsse auf LOW, so ist auch der Ausgabeanschluss auf LOW.\\\\
+\newpage
+\begin{figure}[h!]
+	\centering
+	\begin{circuitikz}
+		\draw (0, 0) node[npn](T1){$T_1$};
+		\draw (0, -2) node[npn](T2){$T_2$};
+		
+		\draw (T1.E) to (T2.C);
+		
+		\draw (T1.B) to[R, l=$R_1$, a=\SI{1}{k\ohm}] ++(-2, 0) to[short, -o] ++(-.5, 0) node[left]{A};
+		\draw (T2.B) to[R, l=$R_2$, a=\SI{1}{k\ohm}] ++(-2, 0) to[short, -o] ++(-.5, 0) node[left]{B};
+		
+		\draw (T1.C) to[short, -|, -o] ++(0, 1) node[above]{$VCC$};
+		\draw (T2.E) to[R, l=$R_3$, a=\SI{100}{\ohm}] ++(0, -2) node[ground](GND){};
+		\draw (T2.E) to[short, *-] +(1, 0) to (1, -1) to[short, -o] (2, -1) node[right]{Out};
+		
+		\draw[gray, very thick, densely dashed] (-3, 3) -- (1.5, 3) -- (1.5, -6) -- (-3, -6) -- cycle;
+		\draw (1.5, -6) node[above right, gray]{UND-Gatter};
+	\end{circuitikz}
+	\caption{Schaltplan für die logische UND-Schaltung mithilfe von npn-Transistoren.}
+\end{figure}
+Die obenstehende Abbildung zeigt meinen Entwurf für das logische UND-Gatter. Die Eingabeanschlüsse A und B sind jeweils mit der Basis eines npn-Transistors verbunden. Dabei wurde an jeder Basis ein Vorwiderstand von $1000\,\Omega$ installiert, um den Basisstrom auf ein angemessenes Niveau ($\approx 3,0\, mA$) zu begrenzen.

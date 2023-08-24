@@ -1,0 +1,11 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {section}{\numberline {1}Einleitung}{3}{}%
+\contentsline {section}{\numberline {2}Historie}{3}{}%
+\contentsline {subsection}{\numberline {2.1}Der \glqq {}erste Computer\grqq {} der Welt}{3}{}%
+\contentsline {subsection}{\numberline {2.2}Verbesserung der Z1 mithilfe der Elektronik}{4}{}%
+\contentsline {subsection}{\numberline {2.3}Erfolge und Probleme der Z4}{4}{}%
+\contentsline {subsection}{\numberline {2.4}ERMETH - Der hauseigene Rechner der ETH Zürich}{5}{}%
+\contentsline {section}{\numberline {3}Funktionsweise und Realisierung}{5}{}%
+\contentsline {subsection}{\numberline {3.1}Binärsystem und binäre Logik}{5}{}%
+\contentsline {subsection}{\numberline {3.2}UND-Gatter}{6}{}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
