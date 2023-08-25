@@ -22,7 +22,7 @@ Ein Binäraddierer ist aus einzelnen Logikgattern zusammengesetzt. Diese sind kl
 	\end{tabular}
 	\caption{Wahrheitstabelle für das logische UND-Gatter}
 \end{figure}
-Diese Wahrheitstabelle wurde aus \cite{rigotti2003digitale} entnommen. Sie zeigt die Funktionsweise des logischen UND-Gatters. Dieses besitzt zwei Eingabeanschlüsse (A und B), und einen Ausgabeanschluss (Out). Ein niedriges Spannungsniveau wird als $0$ dargestellt, ein hohes als $1$. Wie in \cite{neuser2008erstellung} zu sehen, können für diese beiden Zustände ebenso die Begriffe \glqq{}HIGH\grqq{} oder \glqq{}LOW\grqq{} verwendet werden.\\\\
+Diese Wahrheitstabelle wurde aus \cite{rigotti2003digitale} entnommen. Sie zeigt die Funktionsweise des logischen UND-Gatters. Dieses besitzt zwei Eingabeanschlüsse (A und B), und einen Ausgabeanschluss (Out). Ein niedriges Spannungsniveau wird als $0$ dargestellt, ein hohes als $1$. Wie in \cite{neuser2008erstellung} zu sehen, können für diese beiden Zustände ebenso die Begriffe \glqq{}LOW\grqq{} oder \glqq{}HIGH\grqq{} verwendet werden.\\\\
 Die Tabelle zeigt, dass der Ausgabeanschluss nur dann auf HIGH liegt, wenn A und B ebenso auf HIGH gesetzt sind. Ist mindestens einer der beiden Eingabeanschlüsse auf LOW, so ist auch der Ausgabeanschluss auf LOW.\\\\
 \newpage
 \begin{figure}[h!]
@@ -45,4 +45,28 @@ Die Tabelle zeigt, dass der Ausgabeanschluss nur dann auf HIGH liegt, wenn A und
 	\end{circuitikz}
 	\caption{Schaltplan für die logische UND-Schaltung mithilfe von npn-Transistoren.}
 \end{figure}
-Die obenstehende Abbildung zeigt meinen Entwurf für das logische UND-Gatter. Die Eingabeanschlüsse A und B sind jeweils mit der Basis eines npn-Transistors verbunden. Dabei wurde an jeder Basis ein Vorwiderstand von $1000\,\Omega$ installiert, um den Basisstrom auf ein angemessenes Niveau ($\approx 3,0\, mA$) zu begrenzen.
+Die obenstehende Abbildung zeigt meinen Entwurf für das logische UND-Gatter. Die Eingabeanschlüsse A und B sind jeweils mit der Basis eines npn-Transistors verbunden. Dabei wurde an jeder Basis ein Vorwiderstand von $1000\,\Omega$ installiert, um den Basisstrom auf ein angemessenes Niveau ($\approx 3,0\, mA$) zu begrenzen. In \cite{zimmermann1998binary} wird gezeigt, dass in der Praxis auf \glqq{}CMOS\grqq{}-Transistoren zurückgegriffen wird. Diese sind für Logikschaltkreise optimaler, da sie auch mit sehr niedrigen Spannungen arbeiten können. Für einfache Logikschaltkreise sind npn-Transistoren allerdings ebenso geeignet.\\\\
+Sind sowohl A als auch B auf HIGH (hier: $VCC=3,0\,V$), so schalten $T_1$ und $T_2$ durch. Somit liegt Out ebenso auf HIGH. Ist mindestens einer der beiden Eingabeanschlüsse auf LOW, so ist die Verbindung zwischen Out und der Versorgungsspannung unterbrochen. Durch den Widerstand gegen das Nullpotenzial wird Out auf LOW gesetzt.\\
+\begin{figure}[h!]
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[scale=.05]{./Fotos/UND-00.jpg}
+		\vspace{1cm}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[scale=.05]{./Fotos/UND-01.jpg}
+		\vspace{1cm}
+	\end{minipage}
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[scale=.05]{./Fotos/UND-10.jpg}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[scale=.05]{./Fotos/UND-11.jpg}
+	\end{minipage}
+	\caption{Praktischer Aufbau des UND-Gatters in allen möglichen Zuständen.}
+\end{figure}
+\newpage
+Diese Abbildung zeigt das logische UND-Gatter auf einem Steckbrett. Die vier möglichen Zustände der Eingabeanschlüsse sind durch die blauen Drähte gegen \glqq{}+\grqq{} erkennbar. Im letzten Bild sind A und B durch diese Drähte mit HIGH verbunden. Die dadurch anliegende Spannung an Out ist durch die leuchtende LED zu erkennen.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.3)  24 AUG 2023 11:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.3)  25 AUG 2023 12:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -733,20 +733,20 @@ File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 ) (document.aux)
 \openout1 = `document.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -814,11 +814,11 @@ File: translations-basic-dictionary-german.trsl (german translation file `trans
 lations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `german'. on input line 18.
+or `german'. on input line 19.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <17.28> on input line 22.
+(Font)              <17.28> on input line 23.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 22.
+(Font)              <12> on input line 23.
  [1
 
 
@@ -833,17 +833,17 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout4 = `document.toc'.
 
  [2] (Einleitung.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 1--28
+Underfull \hbox (badness 10000) in paragraph at lines 1--29
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1--28
+Underfull \hbox (badness 10000) in paragraph at lines 1--29
 
  []
 
 
-Overfull \hbox (41.85959pt too wide) in paragraph at lines 1--28
+Overfull \hbox (41.85959pt too wide) in paragraph at lines 1--29
 \OT1/cmr/m/n/12 det wer-den kann, ist der []Bin[]araddierer\, wel-cher im Fol-g
 en-den the-ma-ti-siert wird.  
  []
@@ -886,12 +886,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--13
  []
 
 [4])
-Underfull \hbox (badness 10000) in paragraph at lines 14--31
+Underfull \hbox (badness 10000) in paragraph at lines 14--32
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--31
+Underfull \hbox (badness 10000) in paragraph at lines 14--32
 
  []
 
@@ -941,30 +941,60 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--27
 
  []
 
-[6]) [7] (document.bbl) [8] (document.aux) ) 
+[6]
+<./Fotos/UND-00.jpg, id=30, 4047.12pt x 2276.505pt>
+File: ./Fotos/UND-00.jpg Graphic file (type jpg)
+<use ./Fotos/UND-00.jpg>
+Package pdftex.def Info: ./Fotos/UND-00.jpg  used on input line 53.
+(pdftex.def)             Requested size: 202.36786pt x 113.83191pt.
+<./Fotos/UND-01.jpg, id=31, 4047.12pt x 2276.505pt>
+File: ./Fotos/UND-01.jpg Graphic file (type jpg)
+<use ./Fotos/UND-01.jpg>
+Package pdftex.def Info: ./Fotos/UND-01.jpg  used on input line 58.
+(pdftex.def)             Requested size: 202.36786pt x 113.83191pt.
+<./Fotos/UND-10.jpg, id=32, 4047.12pt x 2276.505pt>
+File: ./Fotos/UND-10.jpg Graphic file (type jpg)
+<use ./Fotos/UND-10.jpg>
+Package pdftex.def Info: ./Fotos/UND-10.jpg  used on input line 63.
+(pdftex.def)             Requested size: 202.36786pt x 113.83191pt.
+<./Fotos/UND-11.jpg, id=33, 4047.12pt x 2276.505pt>
+File: ./Fotos/UND-11.jpg Graphic file (type jpg)
+<use ./Fotos/UND-11.jpg>
+Package pdftex.def Info: ./Fotos/UND-11.jpg  used on input line 67.
+(pdftex.def)             Requested size: 202.36786pt x 113.83191pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--71
+
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[7]) [8 <./Fotos/UND-00.jpg> <./Fotos/UND-01.jpg> <./Fotos/UND-10.jpg> <./Fotos
+/UND-11.jpg>] (document.bbl) [9] (document.aux) ) 
 Here is how much of TeX's memory you used:
- 38294 strings out of 476375
- 1000316 string characters out of 5788976
- 1868299 words of memory out of 5000000
- 58296 multiletter control sequences out of 15000+600000
+ 38324 strings out of 476375
+ 1000924 string characters out of 5788976
+ 1871299 words of memory out of 5000000
+ 58320 multiletter control sequences out of 15000+600000
  519088 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 110i,9n,106p,10632b,1212s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\adrii\AppData\Local\MiKT
-eX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/adrii/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/adrii/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/a
-drii/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C
-:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr1
-2.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmr17.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmr8.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmssbx10.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/adrii/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on document.pdf (8 pages, 136596 bytes).
+ 110i,10n,106p,10632b,1212s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\adrii\AppData\Local
+\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/adrii/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/adrii
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Us
+ers/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.p
+fb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmr12.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmr17.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmr8.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/adrii/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/adrii/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on document.pdf (9 pages, 8269490 bytes).
 PDF statistics:
- 82 PDF objects out of 1000 (max. 8388607)
+ 89 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
