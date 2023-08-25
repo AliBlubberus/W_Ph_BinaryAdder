@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.3)  25 AUG 2023 12:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.3)  25 AUG 2023 13:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -942,59 +942,100 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--27
  []
 
 [6]
-<./Fotos/UND-00.jpg, id=30, 4047.12pt x 2276.505pt>
-File: ./Fotos/UND-00.jpg Graphic file (type jpg)
-<use ./Fotos/UND-00.jpg>
-Package pdftex.def Info: ./Fotos/UND-00.jpg  used on input line 53.
-(pdftex.def)             Requested size: 202.36786pt x 113.83191pt.
-<./Fotos/UND-01.jpg, id=31, 4047.12pt x 2276.505pt>
-File: ./Fotos/UND-01.jpg Graphic file (type jpg)
-<use ./Fotos/UND-01.jpg>
-Package pdftex.def Info: ./Fotos/UND-01.jpg  used on input line 58.
-(pdftex.def)             Requested size: 202.36786pt x 113.83191pt.
-<./Fotos/UND-10.jpg, id=32, 4047.12pt x 2276.505pt>
-File: ./Fotos/UND-10.jpg Graphic file (type jpg)
-<use ./Fotos/UND-10.jpg>
-Package pdftex.def Info: ./Fotos/UND-10.jpg  used on input line 63.
-(pdftex.def)             Requested size: 202.36786pt x 113.83191pt.
-<./Fotos/UND-11.jpg, id=33, 4047.12pt x 2276.505pt>
-File: ./Fotos/UND-11.jpg Graphic file (type jpg)
-<use ./Fotos/UND-11.jpg>
-Package pdftex.def Info: ./Fotos/UND-11.jpg  used on input line 67.
-(pdftex.def)             Requested size: 202.36786pt x 113.83191pt.
+
+LaTeX Warning: File `./Fotos/UND-00.jpg' not found on input line 53.
+
+
+! Package pdftex.def Error: File `./Fotos/UND-00.jpg' not found: using draft se
+tting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.53 ...udegraphics[scale=.05]{./Fotos/UND-00.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `./Fotos/UND-01.jpg' not found on input line 58.
+
+
+! Package pdftex.def Error: File `./Fotos/UND-01.jpg' not found: using draft se
+tting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.58 ...udegraphics[scale=.05]{./Fotos/UND-01.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `./Fotos/UND-10.jpg' not found on input line 63.
+
+
+! Package pdftex.def Error: File `./Fotos/UND-10.jpg' not found: using draft se
+tting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63 ...udegraphics[scale=.05]{./Fotos/UND-10.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `./Fotos/UND-11.jpg' not found on input line 67.
+
+
+! Package pdftex.def Error: File `./Fotos/UND-11.jpg' not found: using draft se
+tting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.67 ...udegraphics[scale=.05]{./Fotos/UND-11.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 48--71
 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[7]) [8 <./Fotos/UND-00.jpg> <./Fotos/UND-01.jpg> <./Fotos/UND-10.jpg> <./Fotos
-/UND-11.jpg>] (document.bbl) [9] (document.aux) ) 
+[7]) [8] (document.bbl) [9] (document.aux) ) 
 Here is how much of TeX's memory you used:
- 38324 strings out of 476375
- 1000924 string characters out of 5788976
- 1871299 words of memory out of 5000000
- 58320 multiletter control sequences out of 15000+600000
- 519088 words of font info for 54 fonts, out of 8000000 for 9000
+ 38438 strings out of 476375
+ 1003843 string characters out of 5788976
+ 1872299 words of memory out of 5000000
+ 58417 multiletter control sequences out of 15000+600000
+ 519257 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 110i,10n,106p,10632b,1212s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\adrii\AppData\Local
-\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/adrii/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/adrii
-/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Us
-ers/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.p
-fb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmr12.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmr17.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmr8.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/adrii/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/adrii/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on document.pdf (9 pages, 8269490 bytes).
+ 110i,9n,106p,10632b,1212s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\adrii\AppData\Local\MiKT
+eX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/adrii/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/adrii/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/a
+drii/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C
+:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr1
+2.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmr17.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmr8.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmssbx10.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/adrii/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/adrii/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on document.pdf (9 pages, 144574 bytes).
 PDF statistics:
- 89 PDF objects out of 1000 (max. 8388607)
+ 90 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
