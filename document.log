@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.3)  25 SEP 2023 16:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.3)  27 SEP 2023 15:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -995,10 +995,10 @@ Package pdftex.def Info: ./Fotos/ODER-11.jpg  used on input line 133.
  [9 <./Fotos/ODER-00.jpg> <./Fotos/ODER-01.jpg> <./Fotos/ODER-10.jpg> <./Fotos/
 ODER-11.jpg>]) [10] (document.bbl) [11] (document.aux) ) 
 Here is how much of TeX's memory you used:
- 38667 strings out of 476375
- 1011602 string characters out of 5788976
+ 38824 strings out of 476375
+ 1016675 string characters out of 5788976
  1874299 words of memory out of 5000000
- 58659 multiletter control sequences out of 15000+600000
+ 58816 multiletter control sequences out of 15000+600000
  519088 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  110i,10n,106p,10632b,1213s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1008,15 +1008,16 @@ ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/User
 s/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb
 ><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
 mmi12.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmr12.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmr17.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmr8.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/adrii/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/adrii/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on document.pdf (11 pages, 16279895 bytes).
+onts/cm/cmmi8.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmr12.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmr17.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/adrii/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/adrii/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/adrii/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on document.pdf (11 pages, 16292455 bytes).
 PDF statistics:
- 99 PDF objects out of 1000 (max. 8388607)
+ 104 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  53 words of extra memory for PDF output out of 10000 (max. 10000000)
 

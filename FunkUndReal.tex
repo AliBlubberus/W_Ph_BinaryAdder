@@ -110,7 +110,7 @@ Der Aufbau des ODER-Gatters ist dem des UND-Gatters ähnlich. Die Wahrheitstabel
 		\draw[gray, very thick, densely dashed] (-3, 3) -- (4.5, 3) -- (4.5, -6) -- (-3, -6) -- cycle;
 		\draw (4.5, -6) node[above right, gray]{ODER-Gatter};
 	\end{circuitikz}
-	\caption{Schaltplan für die logische UND-Schaltung mithilfe von npn-Transistoren.}
+	\caption{Schaltplan für die logische ODER-Schaltung mithilfe von npn-Transistoren.}
 \end{figure}
 Diese Abbildung beschreibt den Aufbau eines ODER-Gatters. Analog zum UND-Gatter liegen auch hier A und B jeweils an der Basis eines npn-Transistors. Die Kollektoren beider Transistoren sind hierbei mit VCC verbunden. Die Emitter der beiden von $T_1$ und $T_2$ sind beide mit Out verbunden. Auch hier liegt an Out ein Widerstand gegen das Nullpotenzial an. Falls A und B auf LOW gesetzt sind, ist Out ebenso auf LOW. 
 \begin{figure}[h!]
@@ -136,3 +136,37 @@ Diese Abbildung beschreibt den Aufbau eines ODER-Gatters. Analog zum UND-Gatter 
 \end{figure}
 \newpage
 Hier sind erneut alle Zustände der Wahrheitstabelle abgebildet. Für drei der vier Fälle zeigt die LED, dass Out auf HIGH liegt.
+
+\subsection{NICHT-Gatter}
+\begin{figure}[h]
+	\centering
+	\hspace{1cm}
+	\begin{tabular}{|c|c|}
+		\hline
+		\textbf{In} & \textbf{Out} \\
+		\hline
+		0 & 1 \\
+		1 & 0 \\
+		\hline
+	\end{tabular}
+	\caption{Wahrheitstabelle für das logische NICHT-Gatter}
+\end{figure}
+Das NICHT-Gatter besitzt lediglich einen Eingabeanschluss. Daher kann dieser auch als \glqq{}In\grqq{} bezeichnet werden. Out zeigt hier den gegenteiligen Zustand von In. So liegt Out beispielsweise auf HIGH, wenn In auf LOW gesetzt ist.\\
+\begin{figure}[h!]
+	\centering
+	\begin{circuitikz}
+		\draw (0, 0) node[npn](T1){$T_1$};
+		
+		\draw (T1.B) to[R, l=$R_1$, a=\SI{1}{k\ohm}] ++(-2, 0) to[short, -o] ++(-.5, 0) node[left]{In};
+		
+		\draw (T1.C) to[short] ++(0, .5) node[ground, rotate=180](GND){};
+		
+		\draw (T1.E) to[short, -*] (0, -1.5) to[R, l=$R_1$, a=\SI{1}{k\ohm}, -o] ++(0, -2.5) node[below]{$VCC$};
+		\draw (0, -1.5) to[short, -o] ++(2.5, 0) node[right]{Out};
+		
+		\draw[gray, very thick, densely dashed] (-3, 3) -- (2, 3) -- (2, -5) -- (-3, -5) -- cycle;
+		\draw (2, -5) node[above right, gray]{NICHT-Gatter};
+	\end{circuitikz}
+	\caption{Schaltplan für die logische NICHT-Schaltung mithilfe von npn-Transistoren.}
+\end{figure}\\
+Wie im Schaltplan zu erkennen, liegt Out durch einen $1000\,\Omega$-Widerstand auf HIGH. Wird In ebenso auf HIGH gesetzt, so wird das Nullpotenzial auch mit Out verbunden. Dadurch kann der Strom abfließen und die Spannung an Out fällt stark ab ($U_{Out}\leq0,1\,V$).

@@ -9,4 +9,5 @@
 \contentsline {subsection}{\numberline {3.1}Binärsystem und binäre Logik}{5}{}%
 \contentsline {subsection}{\numberline {3.2}UND-Gatter}{6}{}%
 \contentsline {subsection}{\numberline {3.3}ODER-Gatter}{8}{}%
+\contentsline {subsection}{\numberline {3.4}NICHT-Gatter}{10}{}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
