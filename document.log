@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.3)  27 SEP 2023 15:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.3)  1 OCT 2023 13:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -733,20 +733,20 @@ File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 ) (document.aux)
 \openout1 = `document.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -814,11 +814,11 @@ File: translations-basic-dictionary-german.trsl (german translation file `trans
 lations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `german'. on input line 42.
+or `german'. on input line 45.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <17.28> on input line 46.
+(Font)              <17.28> on input line 49.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 46.
+(Font)              <12> on input line 49.
  [1
 
 
@@ -833,17 +833,17 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout4 = `document.toc'.
 
  [2] (Einleitung.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 1--52
+Underfull \hbox (badness 10000) in paragraph at lines 1--55
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1--52
+Underfull \hbox (badness 10000) in paragraph at lines 1--55
 
  []
 
 
-Overfull \hbox (41.85959pt too wide) in paragraph at lines 1--52
+Overfull \hbox (41.85959pt too wide) in paragraph at lines 1--55
 \OT1/cmr/m/n/12 det wer-den kann, ist der []Bin[]araddierer\, wel-cher im Fol-g
 en-den the-ma-ti-siert wird.  
  []
@@ -886,12 +886,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--13
  []
 
 [4])
-Underfull \hbox (badness 10000) in paragraph at lines 14--55
+Underfull \hbox (badness 10000) in paragraph at lines 14--58
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--55
+Underfull \hbox (badness 10000) in paragraph at lines 14--58
 
  []
 
@@ -946,22 +946,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--27
 File: ./Fotos/UND-00.jpg Graphic file (type jpg)
 <use ./Fotos/UND-00.jpg>
 Package pdftex.def Info: ./Fotos/UND-00.jpg  used on input line 53.
-(pdftex.def)             Requested size: 202.36786pt x 113.83191pt.
+(pdftex.def)             Requested size: 202.30609pt x 113.81102pt.
 <./Fotos/UND-01.jpg, id=31, 4047.12pt x 2276.505pt>
 File: ./Fotos/UND-01.jpg Graphic file (type jpg)
 <use ./Fotos/UND-01.jpg>
 Package pdftex.def Info: ./Fotos/UND-01.jpg  used on input line 58.
-(pdftex.def)             Requested size: 202.36786pt x 113.83191pt.
+(pdftex.def)             Requested size: 202.30609pt x 113.81102pt.
 <./Fotos/UND-10.jpg, id=32, 4047.12pt x 2276.505pt>
 File: ./Fotos/UND-10.jpg Graphic file (type jpg)
 <use ./Fotos/UND-10.jpg>
 Package pdftex.def Info: ./Fotos/UND-10.jpg  used on input line 63.
-(pdftex.def)             Requested size: 202.36786pt x 113.83191pt.
+(pdftex.def)             Requested size: 202.30609pt x 113.81102pt.
 <./Fotos/UND-11.jpg, id=33, 4047.12pt x 2276.505pt>
 File: ./Fotos/UND-11.jpg Graphic file (type jpg)
 <use ./Fotos/UND-11.jpg>
 Package pdftex.def Info: ./Fotos/UND-11.jpg  used on input line 67.
-(pdftex.def)             Requested size: 202.36786pt x 113.83191pt.
+(pdftex.def)             Requested size: 202.30609pt x 113.81102pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 48--71
 
@@ -976,48 +976,64 @@ UND-11.jpg>]
 File: ./Fotos/ODER-00.jpg Graphic file (type jpg)
 <use ./Fotos/ODER-00.jpg>
 Package pdftex.def Info: ./Fotos/ODER-00.jpg  used on input line 119.
-(pdftex.def)             Requested size: 202.36786pt x 113.83191pt.
+(pdftex.def)             Requested size: 202.30609pt x 113.81102pt.
 <./Fotos/ODER-01.jpg, id=45, 4047.12pt x 2276.505pt>
 File: ./Fotos/ODER-01.jpg Graphic file (type jpg)
 <use ./Fotos/ODER-01.jpg>
 Package pdftex.def Info: ./Fotos/ODER-01.jpg  used on input line 124.
-(pdftex.def)             Requested size: 202.36786pt x 113.83191pt.
+(pdftex.def)             Requested size: 202.30609pt x 113.81102pt.
 <./Fotos/ODER-10.jpg, id=46, 4047.12pt x 2276.505pt>
 File: ./Fotos/ODER-10.jpg Graphic file (type jpg)
 <use ./Fotos/ODER-10.jpg>
 Package pdftex.def Info: ./Fotos/ODER-10.jpg  used on input line 129.
-(pdftex.def)             Requested size: 202.36786pt x 113.83191pt.
+(pdftex.def)             Requested size: 202.30609pt x 113.81102pt.
 <./Fotos/ODER-11.jpg, id=47, 4047.12pt x 2276.505pt>
 File: ./Fotos/ODER-11.jpg Graphic file (type jpg)
 <use ./Fotos/ODER-11.jpg>
 Package pdftex.def Info: ./Fotos/ODER-11.jpg  used on input line 133.
-(pdftex.def)             Requested size: 202.36786pt x 113.83191pt.
+(pdftex.def)             Requested size: 202.30609pt x 113.81102pt.
  [9 <./Fotos/ODER-00.jpg> <./Fotos/ODER-01.jpg> <./Fotos/ODER-10.jpg> <./Fotos/
-ODER-11.jpg>]) [10] (document.bbl) [11] (document.aux) ) 
+ODER-11.jpg>]
+<./Fotos/NICHT-0.jpg, id=51, 4047.12pt x 2276.505pt>
+File: ./Fotos/NICHT-0.jpg Graphic file (type jpg)
+<use ./Fotos/NICHT-0.jpg>
+Package pdftex.def Info: ./Fotos/NICHT-0.jpg  used on input line 175.
+(pdftex.def)             Requested size: 202.30609pt x 113.81102pt.
+<./Fotos/NICHT-1.jpg, id=52, 3771.08875pt x 2120.92375pt>
+File: ./Fotos/NICHT-1.jpg Graphic file (type jpg)
+<use ./Fotos/NICHT-1.jpg>
+Package pdftex.def Info: ./Fotos/NICHT-1.jpg  used on input line 179.
+(pdftex.def)             Requested size: 202.31804pt x 113.81102pt.
+ [10 <./Fotos/NICHT-0.jpg> <./Fotos/NICHT-1.jpg>])
+Underfull \hbox (badness 10000) in paragraph at lines 201--61
+
+ []
+
+[11] (document.bbl) [12] (document.aux) ) 
 Here is how much of TeX's memory you used:
- 38824 strings out of 476375
- 1016675 string characters out of 5788976
- 1874299 words of memory out of 5000000
- 58816 multiletter control sequences out of 15000+600000
+ 39195 strings out of 476375
+ 1028466 string characters out of 5788976
+ 1882299 words of memory out of 5000000
+ 59185 multiletter control sequences out of 15000+600000
  519088 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 110i,10n,106p,10632b,1213s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\adrii\AppDat
-a\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/adrii/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/User
-s/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb
-><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
-mmi12.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmmi8.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmr12.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmr17.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/adrii/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/adrii/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/adrii/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on document.pdf (11 pages, 16292455 bytes).
+ 110i,10n,106p,10632b,1219s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\adrii\AppData\Local\MiKTeX\
+fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/adrii/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/adrii/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/adri
+i/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/U
+sers/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.p
+fb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmr12.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmr17.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmr8.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/adrii/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/adrii/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on document.pdf (12 pages, 19940485 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
+ 109 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 53 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 63 words of extra memory for PDF output out of 10000 (max. 10000000)
 

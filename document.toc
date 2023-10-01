@@ -10,4 +10,5 @@
 \contentsline {subsection}{\numberline {3.2}UND-Gatter}{6}{}%
 \contentsline {subsection}{\numberline {3.3}ODER-Gatter}{8}{}%
 \contentsline {subsection}{\numberline {3.4}NICHT-Gatter}{10}{}%
+\contentsline {subsection}{\numberline {3.5}NAND-Gatter}{11}{}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

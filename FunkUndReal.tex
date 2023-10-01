@@ -50,21 +50,21 @@ Sind sowohl A als auch B auf HIGH (hier: $VCC=3,0\,V$), so schalten $T_1$ und $T
 \begin{figure}[h!]
 	\begin{minipage}{.5\textwidth}
 		\centering
-		\includegraphics[scale=.05]{./Fotos/UND-00.jpg}
+		\includegraphics[height=4cm, keepaspectratio]{./Fotos/UND-00.jpg}
 		\vspace{1cm}
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 		\centering
-		\includegraphics[scale=.05]{./Fotos/UND-01.jpg}
+		\includegraphics[height=4cm, keepaspectratio]{./Fotos/UND-01.jpg}
 		\vspace{1cm}
 	\end{minipage}
 	\begin{minipage}{.5\textwidth}
 		\centering
-		\includegraphics[scale=.05]{./Fotos/UND-10.jpg}
+		\includegraphics[height=4cm, keepaspectratio]{./Fotos/UND-10.jpg}
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 		\centering
-		\includegraphics[scale=.05]{./Fotos/UND-11.jpg}
+		\includegraphics[height=4cm, keepaspectratio]{./Fotos/UND-11.jpg}
 	\end{minipage}
 	\caption{Praktischer Aufbau des UND-Gatters in allen möglichen Zuständen.}
 \end{figure}
@@ -116,26 +116,25 @@ Diese Abbildung beschreibt den Aufbau eines ODER-Gatters. Analog zum UND-Gatter 
 \begin{figure}[h!]
 	\begin{minipage}{.5\textwidth}
 		\centering
-		\includegraphics[scale=.05]{./Fotos/ODER-00.jpg}
+		\includegraphics[height=4cm, keepaspectratio]{./Fotos/ODER-00.jpg}
 		\vspace{1cm}
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 		\centering
-		\includegraphics[scale=.05]{./Fotos/ODER-01.jpg}
+		\includegraphics[height=4cm, keepaspectratio]{./Fotos/ODER-01.jpg}
 		\vspace{1cm}
 	\end{minipage}
 	\begin{minipage}{.5\textwidth}
 		\centering
-		\includegraphics[scale=.05]{./Fotos/ODER-10.jpg}
+		\includegraphics[height=4cm, keepaspectratio]{./Fotos/ODER-10.jpg}
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 		\centering
-		\includegraphics[scale=.05]{./Fotos/ODER-11.jpg}
+		\includegraphics[height=4cm, keepaspectratio]{./Fotos/ODER-11.jpg}
 	\end{minipage}
 	\caption{Praktischer Aufbau des ODER-Gatters in allen möglichen Zuständen.}
 \end{figure}
 \newpage
-Hier sind erneut alle Zustände der Wahrheitstabelle abgebildet. Für drei der vier Fälle zeigt die LED, dass Out auf HIGH liegt.
 
 \subsection{NICHT-Gatter}
 \begin{figure}[h]
@@ -159,14 +158,76 @@ Das NICHT-Gatter besitzt lediglich einen Eingabeanschluss. Daher kann dieser auc
 		
 		\draw (T1.B) to[R, l=$R_1$, a=\SI{1}{k\ohm}] ++(-2, 0) to[short, -o] ++(-.5, 0) node[left]{In};
 		
-		\draw (T1.C) to[short] ++(0, .5) node[ground, rotate=180](GND){};
+		\draw (T1.C) to[short] ++(0, .5) to[R, l=$R_2$, a=\SI{1}{k\ohm}, -o] ++(0, 2) node[above]{$VCC$};
 		
-		\draw (T1.E) to[short, -*] (0, -1.5) to[R, l=$R_1$, a=\SI{1}{k\ohm}, -o] ++(0, -2.5) node[below]{$VCC$};
-		\draw (0, -1.5) to[short, -o] ++(2.5, 0) node[right]{Out};
+		\draw (T1.E) to[short] (0, -1) node[ground](GND){};
+		\draw (0, .75) to[short, *-o] ++(2.5, 0) node[right]{Out};
 		
-		\draw[gray, very thick, densely dashed] (-3, 3) -- (2, 3) -- (2, -5) -- (-3, -5) -- cycle;
-		\draw (2, -5) node[above right, gray]{NICHT-Gatter};
+		\draw[gray, very thick, densely dashed] (-3, 4.5) -- (2, 4.5) -- (2, -2.5) -- (-3, -2.5) -- cycle;
+		\draw (2, -2.5) node[above right, gray]{NICHT-Gatter};
 	\end{circuitikz}
 	\caption{Schaltplan für die logische NICHT-Schaltung mithilfe von npn-Transistoren.}
 \end{figure}\\
 Wie im Schaltplan zu erkennen, liegt Out durch einen $1000\,\Omega$-Widerstand auf HIGH. Wird In ebenso auf HIGH gesetzt, so wird das Nullpotenzial auch mit Out verbunden. Dadurch kann der Strom abfließen und die Spannung an Out fällt stark ab ($U_{Out}\leq0,1\,V$).
+\begin{figure}[h!]
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[height=4cm, keepaspectratio]{./Fotos/NICHT-0.jpg}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[height=4cm, keepaspectratio]{./Fotos/NICHT-1.jpg}
+	\end{minipage}
+	\caption{Praktischer Aufbau des NICHT-Gatters in allen möglichen Zuständen.}
+\end{figure}
+\newpage
+
+\subsection{NAND-Gatter}
+\begin{figure}[h]
+	\centering
+	\hspace{1cm}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{A} & \textbf{B} & \textbf{Out} \\
+		\hline
+		0 & 0 & 1 \\
+		1 & 0 & 1 \\
+		0 & 1 & 1 \\
+		1 & 1 & 0 \\
+		\hline
+	\end{tabular}
+	\caption{Wahrheitstabelle für das logische NAND-Gatter}
+\end{figure}
+Wie in der Wahrheitstabelle zu erkennen, liegt Out auf HIGH, solange nicht A und B auf HIGH gesetzt sind. Das Verhalten dieses Gatters ist also gegenteilig zu dem des UND-Gatters. Der Name \gqq{NAND} setzt sich aus \gqq{NOT} und \gqq{AND} zusammen. Für das gewünschte Verhalten muss die Ausgabe eines UND-Gatters als Eingabe für ein NICHT-Gatter genutzt werden.\\
+\begin{figure}[h!]
+	\centering
+	\begin{circuitikz}
+		\draw (0, 0) node[npn](T1){$T_1$};
+		\draw (0, -2) node[npn](T2){$T_2$};
+		
+		\draw (T1.B) to[R, l=$R_1$, a=\SI{2}{k\ohm}] ++(-2, 0) to[short, -o] ++(-.5, 0) node[left]{A};
+		\draw (T2.B) to[R, l=$R_2$, a=\SI{2}{k\ohm}] ++(-2, 0) to[short, -o] ++(-.5, 0) node[left]{B};
+		
+		\draw (T1.C) to[short, -o] ++(0, 1) node[above]{$VCC$};
+		\draw (T1.E) to[short] (T2.C);
+		
+		\draw (T2.E) to[R, l=$R_3$, a=\SI{330}{\ohm}] ++(0, -3) node[ground](GND){};
+		
+		\draw (5, -3) node[npn](T3){$T_3$};
+		
+		\draw (0, -3) to[short, *-] ++(1, 0) to[R, l=$R_4$, a=\SI{1}{k\ohm}] (T3.B);
+		\draw (T3.E) to[short] ++(0, -1) node[ground](GND){};
+		\draw (T3.C) to[short] ++(0, 1) to[R, l=$R_5$, a=\SI{1}{k\ohm}, -o] ++(0, 2) node[above]{$VCC$};
+		
+		\draw (5, -2) to[short, *-o] ++(2, 0) node[right]{Out};
+		
+		\draw[gray, very thick, densely dashed] (-3, 3) -- (6.5, 3) -- (6.5, -8) -- (-3, -8) -- cycle;
+		\draw[lightgray, very thick, densely dashed] (-2.75, 2.75) -- (1.25, 2.75) -- (1.25, -6.75) -- (-2.75, -6.75) -- cycle;
+		\draw[lightgray, very thick, densely dashed] (1.5, 2.75) -- (6.25, 2.75) -- (6.25, -6.75) -- (1.5, -6.75) -- cycle;
+	
+		\draw (6.5, -8) node[above right, gray]{NAND-Gatter};
+		\draw (-.75, -6.75) node[below, gray]{UND-Gatter};
+		\draw (3.875, -6.75) node[below, gray]{NICHT-Gatter};
+	\end{circuitikz}
+	\caption{Schaltplan für die logische NAND-Schaltung mithilfe von npn-Transistoren. Zusammengesetzt aus NICHT- und UND-Gatter}
+\end{figure}\\
