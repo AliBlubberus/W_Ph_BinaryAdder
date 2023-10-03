@@ -229,5 +229,44 @@ Wie in der Wahrheitstabelle zu erkennen, liegt Out auf HIGH, solange nicht A und
 		\draw (-.75, -6.75) node[below, gray]{UND-Gatter};
 		\draw (3.875, -6.75) node[below, gray]{NICHT-Gatter};
 	\end{circuitikz}
-	\caption{Schaltplan für die logische NAND-Schaltung mithilfe von npn-Transistoren. Zusammengesetzt aus NICHT- und UND-Gatter}
+	\caption{Schaltplan für die logische NAND-Schaltung mithilfe von npn-Transistoren. Zusammengesetzt aus NICHT- und UND-Gatter.}
 \end{figure}\\
+Die Vorwiderstände an der Basis von $T_1$ und $T_2$ betragen hier jeweils $2\,k\Omega$, um den Stromfluss zwischen Basis und Emitter zu minimieren ($I_{BE} \approx 0.5\,mA$). Dies verhindert, dass durch $I_{BE}$ $T_3$ durchschaltet, wenn nur B auf HIGH liegt.
+\newpage
+\begin{figure}[!h]
+	\centering
+	\hspace{1cm}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{A} & \textbf{B} & $U_{BE,T_3}$ \\
+		\hline
+		0 & 0 & $0.0\,V$ \\
+		1 & 0 & $0.0\,V$ \\
+		0 & 1 & $0.3\,V$ \\
+		1 & 1 & $1.0\,V$ \\
+		\hline
+	\end{tabular}
+	\caption{Messwerte der Basis-Emitter-Spannung von $T_3$ für alle möglichen Zustände von A und B im NAND-Gatter.}
+\end{figure}
+Wenn A oder B auf LOW gesetzt ist, wird die Basis von $T_3$ durch $R_3$ und $R_4$ auf dass Nullniveau gesenkt. Ist nur B auf HIGH gesetzt, so liegt an der Basis von $T_3$ eine kleine Spannung $U_{BE,T_3} \approx 0.3\,V$ an. Diese genügt jedoch nicht, um den Transistor durchzuschalten. Erst wenn A und B auf HIGH liegen, fällt durch $T_3$ die Spannung an Out ab.\\
+\begin{figure}[h!]
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[height=4cm, keepaspectratio]{./Fotos/NAND-00.jpg}
+		\vspace{1cm}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[height=4cm, keepaspectratio]{./Fotos/NAND-01.jpg}
+		\vspace{1cm}
+	\end{minipage}
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[height=4cm, keepaspectratio]{./Fotos/NAND-10.jpg}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[height=4cm, keepaspectratio]{./Fotos/NAND-11.jpg}
+	\end{minipage}
+	\caption{Praktischer Aufbau des NAND-Gatters in allen möglichen Zuständen.}
+\end{figure}
