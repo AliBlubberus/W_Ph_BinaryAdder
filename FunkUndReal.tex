@@ -23,7 +23,7 @@ Ein Binäraddierer ist aus einzelnen Logikgattern zusammengesetzt. Diese sind kl
 	\caption{Wahrheitstabelle für das logische UND-Gatter}
 \end{figure}
 Diese Wahrheitstabelle wurde aus \cite{rigotti2003digitale} entnommen. Sie zeigt die Funktionsweise des logischen UND-Gatters. Dieses besitzt zwei Eingabeanschlüsse (A und B), und einen Ausgabeanschluss (Out). Ein niedriges Spannungsniveau wird als $0$ dargestellt, ein hohes als $1$. Wie in \cite{neuser2008erstellung} zu sehen, können für diese beiden Zustände ebenso die Begriffe \glqq{}LOW\grqq{} oder \glqq{}HIGH\grqq{} verwendet werden.\\\\
-Die Tabelle zeigt, dass der Ausgabeanschluss nur dann auf HIGH liegt, wenn A und B ebenso auf HIGH gesetzt sind. Ist mindestens einer der beiden Eingabeanschlüsse auf LOW, so ist auch der Ausgabeanschluss auf LOW.\\\\
+Die Tabelle zeigt, dass der Ausgabeanschluss nur dann auf HIGH liegt, wenn A und B ebenso auf HIGH gesetzt sind. Ist mindestens einer der beiden Eingabeanschlüsse auf LOW, so ist auch der Ausgabeanschluss auf LOW. Out soll also genau dann mit der Versorgungsspannung verbunden sein, wenn sowohl A, als auch B ebenso damit verbunden sind. Dies kann durch zwei in Reihe geschaltete Transistoren realisiert werden. Setzt man A oder B auf HIGH, sorgt dies dafür, dass der jeweilige Transistor durchschaltet. Liegt die Versorgungsspannung am Kollektor des ersten Transistors, so misst man am Emitter des zweiten eine hohe Spannung, wenn A und B auf HIGH liegen.
 \newpage
 \begin{figure}[h!]
 	\centering
@@ -46,7 +46,7 @@ Die Tabelle zeigt, dass der Ausgabeanschluss nur dann auf HIGH liegt, wenn A und
 	\caption{Schaltplan für die logische UND-Schaltung mithilfe von npn-Transistoren.}
 \end{figure}
 Die obenstehende Abbildung zeigt meinen Entwurf für das logische UND-Gatter. Die Eingabeanschlüsse A und B sind jeweils mit der Basis eines npn-Transistors verbunden. Dabei wurde an jeder Basis ein Vorwiderstand von $1000\,\Omega$ installiert, um den Basisstrom auf ein angemessenes Niveau ($\approx 3,0\, mA$) zu begrenzen. In \cite{zimmermann1998binary} wird gezeigt, dass in der Praxis auf \glqq{}CMOS\grqq{}-Transistoren zurückgegriffen wird. Diese sind für Logikschaltkreise optimaler, da sie auch mit sehr niedrigen Spannungen arbeiten können. Für einfache Logikschaltkreise sind npn-Transistoren allerdings ebenso geeignet.\\\\
-Sind sowohl A als auch B auf HIGH (hier: $VCC=3,0\,V$), so schalten $T_1$ und $T_2$ durch. Somit liegt Out ebenso auf HIGH. Ist mindestens einer der beiden Eingabeanschlüsse auf LOW, so ist die Verbindung zwischen Out und der Versorgungsspannung unterbrochen. Durch den Widerstand gegen das Nullpotenzial wird Out auf LOW gesetzt.\\
+Sind sowohl A als auch B auf HIGH (hier: $VCC=3,0\,V$), so schalten $T_1$ und $T_2$ durch. Somit liegt Out ebenso auf HIGH. Ist mindestens einer der beiden Eingabeanschlüsse auf LOW, so ist die Verbindung zwischen Out und der Versorgungsspannung unterbrochen. Somit wäre Out ein offener Kontakt. Dieser könnte durch äußere Einflüsse, wie elektromagnetische Störsignale, nachfolgende Transistoren ungewollt ansteuern. Um dies zu verhindern, ist Out durch einen Widerstand mit dem Nullniveau verbunden.
 \begin{figure}[h!]
 	\begin{minipage}{.5\textwidth}
 		\centering
@@ -87,7 +87,7 @@ Diese Abbildung zeigt das logische UND-Gatter auf einem Steckbrett. Die vier mö
 	\end{tabular}
 	\caption{Wahrheitstabelle für das logische ODER-Gatter}
 \end{figure}
-Der Aufbau des ODER-Gatters ist dem des UND-Gatters ähnlich. Die Wahrheitstabelle zeigt, das hier Out auf HIGH liegt, sobald entweder A oder B auf HIGH liegen.
+Der Aufbau des ODER-Gatters ist dem des UND-Gatters ähnlich. Die Wahrheitstabelle zeigt, das hier Out auf HIGH liegt, sobald entweder A oder B auf HIGH liegen. Wie beim UND-Gatter kann hier auf zwei Transistoren zurückgegriffen werden. Diese in Reihe zu schalten ist hier allerdings nicht zielführend. Beide Kollektoren müssen mit Plus verbunden sein. Liegen beide Emitter auf Out, genügt das Durchschalten eines Transistors um Out auf HIGH zu setzen. Sind A und B auf LOW, so muss Out auf das Nullniveau gezogen werden. Hierfür wird erneut ein $100\Omega$ Widerstand verwendet.
 \newpage
 \begin{figure}[h!]
 	\centering
@@ -112,7 +112,7 @@ Der Aufbau des ODER-Gatters ist dem des UND-Gatters ähnlich. Die Wahrheitstabel
 	\end{circuitikz}
 	\caption{Schaltplan für die logische ODER-Schaltung mithilfe von npn-Transistoren.}
 \end{figure}
-Diese Abbildung beschreibt den Aufbau eines ODER-Gatters. Analog zum UND-Gatter liegen auch hier A und B jeweils an der Basis eines npn-Transistors. Die Kollektoren beider Transistoren sind hierbei mit VCC verbunden. Die Emitter der beiden von $T_1$ und $T_2$ sind beide mit Out verbunden. Auch hier liegt an Out ein Widerstand gegen das Nullpotenzial an. Falls A und B auf LOW gesetzt sind, ist Out ebenso auf LOW. 
+Diese Abbildung beschreibt den Aufbau eines ODER-Gatters. Analog zum UND-Gatter liegen auch hier A und B jeweils an der Basis eines npn-Transistors.
 \begin{figure}[h!]
 	\begin{minipage}{.5\textwidth}
 		\centering
@@ -150,7 +150,7 @@ Diese Abbildung beschreibt den Aufbau eines ODER-Gatters. Analog zum UND-Gatter 
 	\end{tabular}
 	\caption{Wahrheitstabelle für das logische NICHT-Gatter}
 \end{figure}
-Das NICHT-Gatter besitzt lediglich einen Eingabeanschluss. Daher kann dieser auch als \glqq{}In\grqq{} bezeichnet werden. Out zeigt hier den gegenteiligen Zustand von In. So liegt Out beispielsweise auf HIGH, wenn In auf LOW gesetzt ist.\\
+Das NICHT-Gatter besitzt lediglich einen Eingabeanschluss. Daher kann dieser auch als \glqq{}In\grqq{} bezeichnet werden. Out zeigt hier den gegenteiligen Zustand von In. So liegt Out beispielsweise auf HIGH, wenn In auf LOW gesetzt ist. Um dieses Verhalten zu erzielen muss Out konstant mit der Versorgungsspannung verbunden sein. Liegt In auf HIGH, so soll die Spannung an Out auf $\approx0\,V$ abfallen. In steuert also einen Transistor an, welcher beim Durchschalten Out mit dem Nullniveau verbindet. Da dies einen Kurzschluss zwischen Plus- und Minuspol ergeben würde, muss gegen Plus ein Widerstand installiert werden.
 \begin{figure}[h!]
 	\centering
 	\begin{circuitikz}
@@ -231,7 +231,7 @@ Wie in der Wahrheitstabelle zu erkennen, liegt Out auf HIGH, solange nicht A und
 	\end{circuitikz}
 	\caption{Schaltplan für die logische NAND-Schaltung mithilfe von npn-Transistoren. Zusammengesetzt aus NICHT- und UND-Gatter.}
 \end{figure}\\
-Die Vorwiderstände an der Basis von $T_1$ und $T_2$ betragen hier jeweils $2\,k\Omega$, um den Stromfluss zwischen Basis und Emitter zu minimieren ($I_{BE} \approx 0.5\,mA$). Dies verhindert, dass durch $I_{BE}$ $T_3$ durchschaltet, wenn nur B auf HIGH liegt.
+Die Vorwiderstände an der Basis von $T_1$ und $T_2$ betragen hier jeweils $2\,k\Omega$, um den Stromfluss zwischen Basis und Emitter zu minimieren ($I_{BE} \approx 0.5\,mA$). Dies verhindert, dass durch $I_{BE}$ $T_3$ durchschaltet, wenn nur B auf HIGH liegt. Um zu verhindern, dass $U_{E,T2}$ zu sehr abfällt, wird dort gegen das Nullpotenzial ein Widerstand von $330\Omega$, statt $100\Omega$ verwendet. Der Aufbau des NICHT-Gatters bleibt unverändert.
 \newpage
 \begin{figure}[!h]
 	\centering
@@ -248,7 +248,7 @@ Die Vorwiderstände an der Basis von $T_1$ und $T_2$ betragen hier jeweils $2\,k
 	\end{tabular}
 	\caption{Messwerte der Basis-Emitter-Spannung von $T_3$ für alle möglichen Zustände von A und B im NAND-Gatter.}
 \end{figure}
-Wenn A oder B auf LOW gesetzt ist, wird die Basis von $T_3$ durch $R_3$ und $R_4$ auf dass Nullniveau gesenkt. Ist nur B auf HIGH gesetzt, so liegt an der Basis von $T_3$ eine kleine Spannung $U_{BE,T_3} \approx 0.3\,V$ an. Diese genügt jedoch nicht, um den Transistor durchzuschalten. Erst wenn A und B auf HIGH liegen, fällt durch $T_3$ die Spannung an Out ab.\\
+Wenn A oder B auf LOW gesetzt ist, wird die Basis von $T_3$ durch $R_3$ und $R_4$ auf dass Nullniveau gesenkt. Ist nur B auf HIGH gesetzt, so liegt wegen $I_{BE,T2}$ an der Basis von $T_3$ eine kleine Spannung $U_{BE,T_3} \approx 0.3\,V$ an. Diese genügt jedoch nicht, um den Transistor durchzuschalten. Erst wenn A und B auf HIGH liegen, fällt durch $T_3$ die Spannung an Out ab.\\
 \begin{figure}[h!]
 	\begin{minipage}{.5\textwidth}
 		\centering
@@ -270,3 +270,89 @@ Wenn A oder B auf LOW gesetzt ist, wird die Basis von $T_3$ durch $R_3$ und $R_4
 	\end{minipage}
 	\caption{Praktischer Aufbau des NAND-Gatters in allen möglichen Zuständen.}
 \end{figure}
+
+\subsection{EXOR-Gatter}
+\begin{figure}[h]
+	\centering
+	\hspace{1cm}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{A} & \textbf{B} & \textbf{Out} \\
+		\hline
+		0 & 0 & 0 \\
+		1 & 0 & 1 \\
+		0 & 1 & 1 \\
+		1 & 1 & 0 \\
+		\hline
+	\end{tabular}
+	\caption{Wahrheitstabelle für das logische EXOR-Gatter}
+\end{figure}
+Der Name des EXOR-Gatters leitet sich aus \gqq{exclusive or} (= ausschließendes ODER) ab. Hierbei ist Out also nur dann auf HIGH, wenn ausschließlich A oder B auf HIGH liegen. Sind A und B auf HIGH, liegt Out auf LOW. Anders ausgedrückt ist Out immer dann auf HIGH, wenn A und B unterschiedliche Zustände aufweisen. Setzt man das EXOR-Gatter aus mehreren kleineren Gattern zusammen, so kann als Grundlage das ODER-Gatter verwendet werden. Dieses verhält bereits sich in drei der vier möglichen Fälle richtig. Sind A und B auf HIGH, muss Out auf Low liegen. Es muss also \gqq{A ODER B} zutreffen, nicht jedoch \gqq{A UND B}. Es ergibt sich der logische Ausdruck \gqq{(A ODER B) UND (A NAND B)}.\\
+\begin{figure}[h!]
+	\centering
+	\begin{circuitikz}
+		
+		% OR
+		
+		\draw (0, 0) node[npn](T1){$T_1$};
+		\draw (1, -2) node[npn](T2){$T_2$};
+		
+		\draw (T1.B) to[R, l=$R_1$, a=\SI{2}{k\ohm}] (-3, 0) to[short, -o] ++(-2, 0) node[left]{A};
+		\draw (T2.B) to[R, l=$R_2$, a=\SI{2}{k\ohm}] (-3, -2) to[short, -o] ++(-2, 0) node[left]{B};
+		
+		\draw (T1.C) to[short, *-] ++(1, 0) to[short] (T2.C);
+		\draw (T1.C) to[short, -o] (0, 2) node[above]{$VCC$};
+		\draw (T1.E) to[short] ++(2, 0) to[short, -*] (2, -3);
+		
+		\draw (T2.E) to[short] (1, -3) to[short] (2, -3) to[R, l=$R_3$, a=\SI{330}{\ohm}] (2, -5) node[ground]{};
+		
+		
+		\draw[lightgray, very thick, densely dashed] (-3, 3) -- (3, 3) -- (3, -6) -- (-3, -6) -- cycle;
+		\draw (0, -6) node[below, gray]{ODER-Gatter};
+		
+		% NAND
+		
+		\draw (0, -9) node[npn](T3){$T_3$};
+		\draw (0, -11) node[npn](T4){$T_4$};
+		
+		\draw (T3.C) to[short, -o] (0, -8) node[above]{$VCC$};
+		\draw (T3.E) to[short] (T4.C);
+		
+		\draw (T3.B) to[R, l=$R_4$, a=\SI{2}{k\ohm}] (-3, -9) to[short] ++(-.5, 0) to[short, -*] (-3.5, 0);
+		\draw (T4.B) to[R, l=$R_5$, a=\SI{2}{k\ohm}] (-3, -11) to[short] ++(-1, 0) to[short, -*] (-4, -2);
+		
+		\draw (T4.E) to[R, l=$R_6$, a=\SI{330}{\ohm}] (0, -14) node[ground]{};
+		
+		\draw (3, -12) node[npn](T5){$T_5$};
+		\draw (T5.B) to[R, l=$R_7$, a=\SI{1}{k\ohm}, -*] (0, -12);
+		\draw (T5.E) to[short] (3, -14) node[ground]{};
+		
+		\draw (T5.C) to[short] (3, -10) to[R, l=$R_8$, a=\SI{1}{k\ohm}, -o] (3, -8) node[above]{$VCC$};
+		
+
+		\draw[lightgray, very thick, densely dashed] (-3, -7) -- (5, -7) -- (5, -15) -- (-3, -15) -- cycle;
+		\draw (1, -15) node[below, gray]{NAND-Gatter};
+		
+		% UND
+		
+		\draw (8, 0) node[npn](T6){$T_6$};
+		\draw (8, -2) node[npn](T7){$T_7$};
+		
+		\draw (T6.C) to[short, -o] (8, 2) node[above]{$VCC$};
+		\draw (T6.E) to[short] (T7.C);
+		
+		\draw (T6.B) to[R, l=$R_9$, a=\SI{1}{k\ohm}] (5, 0) to[short] (5, -3) to[short] (2, -3);
+		\draw (T7.B) to[R, l=$R_{10}$, a=\SI{1}{k\ohm}] (5.5, -2) to[short] (5.5, -11) to[short, -*] (3, -11);
+		
+		\draw (T7.E) to[R, l=$R_{11}$, a=\SI{100}{\ohm}] (8, -5) node[ground]{};
+		\draw (8, -3) to[short, *-o] (11, -3) node[right]{Out};
+		
+		\draw[lightgray, very thick, densely dashed] (4, 3) -- (9.5, 3) -- (9.5, -6) -- (4, -6) -- cycle;
+		\draw (6.75, -6) node[below, gray]{UND-Gatter};
+		
+		\draw[gray, very thick, densely dashed] (-4.5, 3.5) -- (10, 3.5) -- (10, -16) -- (-4.5, -16) -- cycle;
+		\draw (10, -16) node[above right, gray]{EXOR-Gatter};
+		
+	\end{circuitikz}
+	\caption{Unoptimierter Schaltplan für die logische EXOR-Schaltung mithilfe von npn-Transistoren. Zusammengesetzt aus NAND-, ODER- und UND-Gatter.}
+\end{figure}\\
