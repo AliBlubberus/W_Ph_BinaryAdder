@@ -356,3 +356,28 @@ Der Name des EXOR-Gatters leitet sich aus \gqq{exclusive or} (= ausschließendes
 	\end{circuitikz}
 	\caption{Unoptimierter Schaltplan für die logische EXOR-Schaltung mithilfe von npn-Transistoren. Zusammengesetzt aus NAND-, ODER- und UND-Gatter.}
 \end{figure}\\
+\newpage
+Bei der Verkettung von UND-, ODER- und NAND-Gattern ergibt sich der abgebildete Schaltplan. Um diesen zu Realisieren wären insgesamt sieben Transistoren nötig. Die Ausgänge des ODER- und NAND-Gatters werden mit den Eingängen A und B des UND-Gatters verbunden.\\\\
+Beim Versuch diese Schaltung praktisch umzusetzen ergaben sich allerdings einige Probleme. Oftmals wies die Schaltung unerwünschtes Verhalten auf. Die Fehlerquelle zu bestimmen erwies sich aufgrund der Größe ebenfalls als schwierig. Nicht zuletzt ist es aus Platz- und Kostengründen nicht zu wünschen Schaltungen unnötig groß zu gestalten. Es galt also, die Schaltung weitmöglichst zu vereinfachen.\\\\
+Die erste Optimierungsmöglichkeit fand sich im NAND-Gatter. Dessen Aufbau setzte sich zuletzt aus drei Transistoren zusammen. Davon bildeten zwei ein logisches UND-Gatter, der Übrige ein NICHT-Gatter. Durch die Verbindung dieser beiden Gatter wurde das Verhalten eines UND-Gatters invertiert. Jedoch ist es möglich dieses Ergebnis mit nur zwei Transistoren zu reproduzieren. Hierfür liegt Out über einen Widerstand an der Versorgungsspannung. Über zwei Transistoren wird Out zusätzlich mit dem Nullpotenzial verbunden. Analog zum UND-Gatter liegen A und B jeweils an der Basis von einem der beiden Transistoren. Ist mindestens einer der Eingänge auf LOW, ist die Verbindung zwischen Out und dem Nullpotenzial unterbrochen, wodurch Out auf HIGH liegt. Sind A und B auf HIGH, so fällt die Spannung an Out über die beiden Transistoren ab. Somit liegt Out auf LOW.\\
+\begin{figure}[h!]
+	\centering
+	\begin{circuitikz}
+		\draw (0, 0) node[npn](T1){$T_1$};
+		\draw (0, -2) node[npn](T2){$T_2$};
+		
+		\draw (T1.B) to[R, l=$R_1$, a=\SI{2}{k\ohm}] ++(-2, 0) to[short, -o] ++(-.5, 0) node[left]{A};
+		\draw (T2.B) to[R, l=$R_2$, a=\SI{2}{k\ohm}] ++(-2, 0) to[short, -o] ++(-.5, 0) node[left]{B};
+		
+		\draw (T1.E) to[short] (T2.C);
+		
+		\draw (T1.C) to[R, l=$R_3$, a=\SI{1}{k\ohm}, -o] (0, 3) node[above]{$VCC$};
+		\draw (T1.C) to[short, *-o] ++(2, 0) node[right]{Out};
+		
+		\draw (T2.E) to[short] (0, -3) node[ground]{};
+		
+		\draw[gray, very thick, densely dashed] (-3, 4) -- (1.5, 4) -- (1.5, -4) -- (-3, -4) -- cycle;
+		\draw (1.5, -4) node[above right, gray]{NAND-Gatter};
+	\end{circuitikz}
+	\caption{Optimierter Schaltplan für die logische NAND-Schaltung, bestehend aus lediglich zwei Transistoren.}
+\end{figure}\\

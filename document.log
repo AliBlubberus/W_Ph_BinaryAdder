@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.3)  8 OCT 2023 19:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.3)  14 OCT 2023 14:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1021,38 +1021,53 @@ Overfull \hbox (40.17073pt too wide) in paragraph at lines 356--357
  [][] 
  []
 
-)
-Underfull \hbox (badness 10000) in paragraph at lines 290--61
+
+Underfull \hbox (badness 10000) in paragraph at lines 290--359
 
  []
 
 [12 <./Fotos/NAND-00.jpg> <./Fotos/NAND-01.jpg> <./Fotos/NAND-10.jpg> <./Fotos/
-NAND-11.jpg>] [13] (document.bbl) [14] (document.aux) ) 
+NAND-11.jpg>] [13])
+Underfull \hbox (badness 10000) in paragraph at lines 360--61
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--61
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--61
+
+ []
+
+[14] (document.bbl) [15] (document.aux) ) 
 Here is how much of TeX's memory you used:
- 40115 strings out of 476375
- 1056536 string characters out of 5788976
+ 40346 strings out of 476375
+ 1063967 string characters out of 5788976
  1911299 words of memory out of 5000000
- 60101 multiletter control sequences out of 15000+600000
+ 60332 multiletter control sequences out of 15000+600000
  519088 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  110i,10n,106p,10632b,1219s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\adrii\AppData
-\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/adrii/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users
-/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-<C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-mi12.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmmi8.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmr12.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmr17.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/adrii/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/adrii/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/adrii/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ad
-rii/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on document.pdf (14 pages, 25117973 bytes).
+ <C:\Users\adrii\AppData\Local\MiKTeX\
+fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/adrii/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/adrii/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/adri
+i/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/U
+sers/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.p
+fb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmr12.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmr17.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmr6.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmr8.pfb><C:/Users/adrii/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/adrii/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/adrii/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on document.pdf (15 pages, 25122250 bytes).
 PDF statistics:
- 125 PDF objects out of 1000 (max. 8388607)
+ 128 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  83 words of extra memory for PDF output out of 10000 (max. 10000000)
 
