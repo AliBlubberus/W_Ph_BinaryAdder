@@ -359,7 +359,7 @@ Der Name des EXOR-Gatters leitet sich aus \gqq{exclusive or} (= ausschließendes
 \newpage
 Bei der Verkettung von UND-, ODER- und NAND-Gattern ergibt sich der abgebildete Schaltplan. Um diesen zu Realisieren wären insgesamt sieben Transistoren nötig. Die Ausgänge des ODER- und NAND-Gatters werden mit den Eingängen A und B des UND-Gatters verbunden.\\\\
 Beim Versuch diese Schaltung praktisch umzusetzen ergaben sich allerdings einige Probleme. Oftmals wies die Schaltung unerwünschtes Verhalten auf. Die Fehlerquelle zu bestimmen erwies sich aufgrund der Größe ebenfalls als schwierig. Nicht zuletzt ist es aus Platz- und Kostengründen nicht zu wünschen Schaltungen unnötig groß zu gestalten. Es galt also, die Schaltung weitmöglichst zu vereinfachen.\\\\
-Die erste Optimierungsmöglichkeit fand sich im NAND-Gatter. Dessen Aufbau setzte sich zuletzt aus drei Transistoren zusammen. Davon bildeten zwei ein logisches UND-Gatter, der Übrige ein NICHT-Gatter. Durch die Verbindung dieser beiden Gatter wurde das Verhalten eines UND-Gatters invertiert. Jedoch ist es möglich dieses Ergebnis mit nur zwei Transistoren zu reproduzieren. Hierfür liegt Out über einen Widerstand an der Versorgungsspannung. Über zwei Transistoren wird Out zusätzlich mit dem Nullpotenzial verbunden. Analog zum UND-Gatter liegen A und B jeweils an der Basis von einem der beiden Transistoren. Ist mindestens einer der Eingänge auf LOW, ist die Verbindung zwischen Out und dem Nullpotenzial unterbrochen, wodurch Out auf HIGH liegt. Sind A und B auf HIGH, so fällt die Spannung an Out über die beiden Transistoren ab. Somit liegt Out auf LOW.\\
+Die erste Optimierungsmöglichkeit fand sich im NAND-Gatter. Dessen Aufbau setzte sich zuletzt aus drei Transistoren zusammen. Davon bildeten zwei ein logisches UND-Gatter, der Übrige ein NICHT-Gatter. Durch die Verbindung dieser beiden Gatter wurde das Verhalten eines UND-Gatters invertiert. Jedoch ist es möglich, dieses Ergebnis mit nur zwei Transistoren zu reproduzieren. Hierfür liegt Out über einen Widerstand an der Versorgungsspannung. Über zwei Transistoren wird Out zusätzlich mit dem Nullpotenzial verbunden. Analog zum UND-Gatter liegen A und B jeweils an der Basis von einem der beiden Transistoren. Ist mindestens einer der Eingänge auf LOW, ist die Verbindung zwischen Out und dem Nullpotenzial unterbrochen, wodurch Out auf HIGH liegt. Sind A und B auf HIGH, so fällt die Spannung an Out über die beiden Transistoren ab. Somit liegt Out auf LOW.\\
 \begin{figure}[h!]
 	\centering
 	\begin{circuitikz}
@@ -381,3 +381,37 @@ Die erste Optimierungsmöglichkeit fand sich im NAND-Gatter. Dessen Aufbau setzt
 	\end{circuitikz}
 	\caption{Optimierter Schaltplan für die logische NAND-Schaltung, bestehend aus lediglich zwei Transistoren.}
 \end{figure}\\
+Durch diese Vereinfachung kann zwar auf einen Transistor verzichtet werden, jedoch sind noch immer insgesamt sechs für den Bau des EXOR-Gatters nötig. Das verwenden eines UND-Gatters, um Out auf LOW zu ziehen, kann allerdings auch beim EXOR-Gatter angewandt werden.\\\\
+In drei der vier möglichen Zustände des ODER-Gatters ist Out auf HIGH. Sind A und B auf HIGH, so soll allerdings Out auf LOW liegen. Analog zum optimierten NAND-Gatter können hier zwei Transistoren genutzt werden. Diese werden in Reihe geschaltet und verbinden den Ausgang des ODER-Gatters mit dem Nullpotenzial. Hierbei ist Out auf HIGH, sobald entweder A oder B auf HIGH ist. Sind A und B auf HIGH, so schalten die beiden Transistoren durch und die Spannung an Out fällt ab. Somit verhält sich das EXOR-Gatter in allen vier Zuständen richtig.\\
+\begin{figure}[h!]
+	\centering
+	\begin{circuitikz}
+		\draw (0, 0) node[npn](T1){$T_1$};
+		\draw (2, -2) node[npn](T2){$T_2$};
+		
+		\draw (T1.B) to[R, l=$R_1$, a=\SI{2}{k\ohm}] ++(-2, 0) to[short] ++(-1, 0) to[short, -o] ++(-1, 0) node[left]{A};
+		\draw (T2.B) to[R, l=$R_2$, a=\SI{2}{k\ohm}] ++(-4, 0) to[short] ++(-1, 0) to[short, -o] ++(-1, 0) node[left]{B};
+		
+		\draw (T1.C) to[short, -o] (0, 2) node[above]{$VCC$};
+		\draw (T2.C) to[short] ++(0, 2) to[short, -*] ++(-2, 0);
+		
+		\draw (T1.E) to[short] ++(3, 0) to[short, -*] (3, -3);
+		\draw (T2.E) to[short] (2, -3) to[short, -o] (5, -3) node[right]{Out};
+		
+		\draw (3, -4) node[npn](T3){$T_3$};
+		\draw (3, -6) node[npn](T4){$T_4$};
+		
+		\draw (T3.C) to[short] (3, -3);
+		\draw (T3.E) to[short] (T4.C);
+		\draw (T4.E) to[short] (3, -7) node[ground]{};
+		
+		\draw (T3.B) to[R, l=$R_3$, a=\SI{2}{k\ohm}] ++(-2, 0) to[short] (-3.5, -4) to[short, -*] (-3.5, 0);
+		\draw (T4.B) to[R, l=$R_4$, a=\SI{2}{k\ohm}] ++(-2, 0) to[short] (-3, -6) to[short, -*] (-3, -2);
+		
+		\draw[gray, very thick, densely dashed] (-4, 3) -- (4, 3) -- (4, -8) -- (-4, -8) -- cycle;
+		\draw (4, -8) node[above right, gray]{EXOR-Gatter};
+		
+	\end{circuitikz}
+	\caption{Optimierter Schaltplan für die logische EXOR-Schaltung, bestehend aus lediglich vier Transistoren.}
+\end{figure}\\
+
