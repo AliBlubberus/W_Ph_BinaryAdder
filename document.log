@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.10.15)  17 OCT 2023 18:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.10.15)  18 OCT 2023 20:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1090,67 +1090,87 @@ Underfull \hbox (badness 1715) in paragraph at lines 415--415
 estehend aus
  []
 
+<./Fotos/EXOR-00.jpg, id=75, 4047.12pt x 2276.505pt>
+File: ./Fotos/EXOR-00.jpg Graphic file (type jpg)
+<use ./Fotos/EXOR-00.jpg>
+Package pdftex.def Info: ./Fotos/EXOR-00.jpg  used on input line 420.
+(pdftex.def)             Requested size: 202.30609pt x 113.81102pt.
+<./Fotos/EXOR-01.jpg, id=76, 4047.12pt x 2276.505pt>
+File: ./Fotos/EXOR-01.jpg Graphic file (type jpg)
+<use ./Fotos/EXOR-01.jpg>
+Package pdftex.def Info: ./Fotos/EXOR-01.jpg  used on input line 425.
+(pdftex.def)             Requested size: 202.30609pt x 113.81102pt.
+<./Fotos/EXOR-10.jpg, id=77, 4047.12pt x 2276.505pt>
+File: ./Fotos/EXOR-10.jpg Graphic file (type jpg)
+<use ./Fotos/EXOR-10.jpg>
+Package pdftex.def Info: ./Fotos/EXOR-10.jpg  used on input line 430.
+(pdftex.def)             Requested size: 202.30609pt x 113.81102pt.
+<./Fotos/EXOR-11.jpg, id=78, 4047.12pt x 2276.505pt>
+File: ./Fotos/EXOR-11.jpg Graphic file (type jpg)
+<use ./Fotos/EXOR-11.jpg>
+Package pdftex.def Info: ./Fotos/EXOR-11.jpg  used on input line 434.
+(pdftex.def)             Requested size: 202.30609pt x 113.81102pt.
 
-Overfull \hbox (8.60217pt too wide) in paragraph at lines 360--417
+Overfull \hbox (8.60217pt too wide) in paragraph at lines 360--438
 []\OT1/cmr/m/n/12 Bei der Verkettung von UND-, ODER- und NAND-Gattern ergibt si
 ch der abgebildete Schaltplan.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 360--417
+Underfull \hbox (badness 10000) in paragraph at lines 360--438
 
  []
 
 
-Overfull \hbox (3.0545pt too wide) in paragraph at lines 360--417
+Overfull \hbox (3.0545pt too wide) in paragraph at lines 360--438
 \OT1/cmr/m/n/12 sich aufgrund der Gr[]o^^Ye ebenfalls als schwierig. Nicht zule
 tzt ist es aus Platz- und Kostengr[]unden
  []
 
 
-Overfull \hbox (11.92654pt too wide) in paragraph at lines 360--417
+Overfull \hbox (11.92654pt too wide) in paragraph at lines 360--438
 \OT1/cmr/m/n/12 nicht zu w[]unschen Schaltungen unn[]otig gro^^Y zu gestalten. 
 Es galt also, die Schaltung weitm[]oglichst
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 360--417
+Underfull \hbox (badness 10000) in paragraph at lines 360--438
 
  []
 
 
-Overfull \hbox (18.39793pt too wide) in paragraph at lines 360--417
+Overfull \hbox (18.39793pt too wide) in paragraph at lines 360--438
 \OT1/cmr/m/n/12 einer der Eing[]ange auf LOW, ist die Verbindung zwischen Out u
 nd dem Nullpotenzial unterbrochen,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 360--417
+Underfull \hbox (badness 10000) in paragraph at lines 360--438
 
  []
 
+[14]
 
-Underfull \hbox (badness 10000) in paragraph at lines 360--417
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
- []
-
-[14]) [15] (document.bbl
+) [15] (document.bbl
 Underfull \hbox (badness 1442) in paragraph at lines 25--30
 []\OT1/cmr/m/n/12 H. Bruderer, ``Konrad zuse und die schweiz: Relaisrechner z4 
 an der eth z[]urich:
  []
 
-) [16] (document.aux)
+) [16 <./Fotos/EXOR-00.jpg> <./Fotos/EXOR-01.jpg> <./Fotos/EXOR-10.jpg> <./Foto
+s/EXOR-11.jpg>] (document.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-10>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 41295 strings out of 476759
- 1090895 string characters out of 5802626
+ 41302 strings out of 476759
+ 1090981 string characters out of 5802626
  1982040 words of memory out of 5000000
- 62619 multiletter control sequences out of 15000+600000
+ 62626 multiletter control sequences out of 15000+600000
  564870 words of font info for 58 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
  110i,10n,107p,10932b,1229s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1169,9 +1189,9 @@ me/adrian/.miktex/texmfs/data/fonts/pk/ljfour/public/cm/dpi600/cmr12.pk> </home
 /adrian/.miktex/texmfs/data/fonts/pk/ljfour/public/cm/dpi600/cmr17.pk> </home/a
 drian/.miktex/texmfs/data/fonts/pk/ljfour/public/cm/dpi864/cmssbx10.pk> </home/
 adrian/.miktex/texmfs/data/fonts/pk/ljfour/public/cm/dpi1493/cmssbx10.pk>
-Output written on document.pdf (16 pages, 25103159 bytes).
+Output written on document.pdf (16 pages, 33081874 bytes).
 PDF statistics:
- 435 PDF objects out of 1000 (max. 8388607)
+ 439 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 83 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 103 words of extra memory for PDF output out of 10000 (max. 10000000)
 
