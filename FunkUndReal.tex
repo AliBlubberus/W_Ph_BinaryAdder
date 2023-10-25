@@ -271,7 +271,7 @@ Wenn A oder B auf LOW gesetzt ist, wird die Basis von $T_3$ durch $R_3$ und $R_4
 	\caption{Praktischer Aufbau des NAND-Gatters in allen möglichen Zuständen.}
 \end{figure}
 
-\subsection{EXOR-Gatter}
+\subsection{EXOR-Gatter} \label{EXOR}
 \begin{figure}[h]
 	\centering
 	\hspace{1cm}
@@ -434,5 +434,89 @@ In drei der vier möglichen Zustände des ODER-Gatters ist Out auf HIGH. Sind A 
 		\includegraphics[height=4cm, keepaspectratio]{./Fotos/EXOR-11.jpg}
 	\end{minipage}
 	\caption{Praktischer Aufbau des EXOR-Gatters in allen möglichen Zuständen.}
+\end{figure}\\
+\newpage
+
+\subsection{Halbaddierer}
+Der schematische Aufbau des Halbaddierers ist in \cite{zimmermann1998binary} abgebildet. Dieses logische Bauteil besitzt zwei Ausgänge. Deshalb wird die Wahrheitstabelle um eine weitere Spalte ergänzt. Die beiden Ausgänge können mit \gqq{$s$} und \gqq{$c_{out}$} (\gqq{carry out}) beschriftet werden. \gqq{$s$} stellt hierbei die Summe der Addition dar. \gqq{$c_{out}$} gibt an, ob sich bei der Rechenoperation ein Überlauf ereignet.\\
+\begin{figure}[h]
+	\centering
+	\hspace{1cm}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		\textbf{A} & \textbf{B} & \textbf{$s$} & \textbf{$c_{out}$} \\
+		\hline
+		0 & 0 & 0 & 0 \\
+		1 & 0 & 1 & 0 \\
+		0 & 1 & 1 & 0 \\
+		1 & 1 & 0 & 1 \\
+		\hline
+	\end{tabular}
+	\caption{Wahrheitstabelle für den Halbaddierer}
+\end{figure}\\
+Sind A und B auf LOW, so ist $s$ ebenso auf LOW ($0+0=0$). Ist entweder A oder B auf HIGH, so liegt $s$ gleichermaßen auf HIGH ($1+0=1$ bzw. $0+1=1$). Sind A und B auf HIGH, so ereignet sich ein Überlauf ($1+1=10$). $s$ liegt hierbei auf LOW. Allein in diesem Fall liegt $c_{out}$ auf HIGH.\\\\
+Die Umsetzung dieses Bauteils erfolgt durch die Verwendung zweier Logikgatter. Das Verhalten von $s$ ist identisch mit dem des EXOR-Gatters. $c_{out}$ verhält sich übereinstimmend zum UND-Gatter. Wie in \fancyref{EXOR} erwähnt, werden größere Logikschaltungen aus npn-Transistoren instabil. Daher wird zukünftig überwiegend auf vorgefertigte Logikgatter zurückgegriffen.\\
+\newpage
+\begin{figure}[h!]
+	\centering
+	\begin{circuitikz}
+		
+		% EXOR IC
+		
+		\draw[black, thick] (-1, 2) -- (2, 2) -- (2, -2) -- (-1, -2) -- cycle;
+		\draw[black, thick] (.25, 2) .. controls (.25, 1.5) and (.75, 1.5) .. (.75, 2);
+		
+		
+		\draw (-1, 1.5) node[right]{$A_1$};
+		\draw (-1, 1) node[right]{$B_1$};
+		\draw (-1, .5) node[right]{$Y_1$};
+		
+		\draw (-1, 0) node[right]{$A_2$};
+		\draw (-1, -.5) node[right]{$B_2$};
+		\draw (-1, -1) node[right]{$Y_2$};
+		
+		\draw (-1, -1.5) node[right]{$\text{GND}$};
+		
+		
+		\draw (2, 1.5) node[left]{$\text{VCC}$};
+		\draw (2, 1) node[left]{$B_4$};
+		\draw (2, .5) node[left]{$A_4$};
+		
+		\draw (2, 0) node[left]{$Y_4$};
+		\draw (2, -.5) node[left]{$B_3$};
+		\draw (2, -1) node[left]{$A_3$};
+		
+		\draw (2, -1.5) node[left]{$Y_3$};
+		
+		\draw[gray] (.5, -2) node[below]{EXOR};
+		
+		% END EXOR IC
+		
+		\draw (-1, -1.5) to[short] (-1.5, -1.5) to[short] (-1.5, -3) node[ground]{};
+		\draw (2, 1.5) to[short] (2.5, 1.5) to[short, -o] (2.5, 3) node[above]{$VCC$};
+		
+		\draw (-9, 0) node[left]{A} to[short, o-] (-4.5, 0) to[short] (-4.5, 1.5) to[short] (-1, 1.5);
+		\draw (-9, -1) node[left]{B} to[short, o-] (-4, -1) to[short] (-4, 1) to[short] (-1, 1);
+		
+		\draw (-1, .5) to[short] (-3, .5) to[short] (-3, -5) to[short, -o] (5, -5) node[right]{$s$};
+		
+		\draw (-4, -5) node[npn](T1){$T_1$};
+		\draw (-4, -7) node[npn](T2){$T_2$};
+		
+		\draw (T1.E) to[short] (T2.C);
+		\draw (T1.C) to[short, -o] ++(0, 2) node[above]{$VCC$};
+		
+		\draw (T1.B) to[R, l=$R_1$, a=\SI{1}{k\ohm}] (-6.5, -5) to[short, -*] (-6.5, 0);
+		\draw (T2.B) to[R, l=$R_2$, a=\SI{1}{k\ohm}] (-6.5, -7) to[short] (-7, -7) to[short, -*] (-7, -1);
+		
+		\draw (T2.E) to[short] (-4, -8) to[short, -o] (5, -8) node[right]{$c_{out}$};
+		\draw (-4, -8) to[R, l=$R_3$, a=\SI{1}{k\ohm}, *-] (-4, -10) node[ground]{};
+		
+		
+		\draw[gray, very thick, densely dashed] (-8, 4) -- (4, 4) -- (4, -11) -- (-8, -11) -- cycle;
+		\draw (4, -11) node[above right, gray]{Halbaddierer};
+		
+	\end{circuitikz}
+	\caption{Schaltplan für den Halbaddierer, bestehend aus jeweils einem EXOR- und UND-Gatter.}
 \end{figure}
 

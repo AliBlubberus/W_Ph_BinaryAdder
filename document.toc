@@ -12,4 +12,5 @@
 \contentsline {subsection}{\numberline {3.4}NICHT-Gatter}{10}{}%
 \contentsline {subsection}{\numberline {3.5}NAND-Gatter}{11}{}%
 \contentsline {subsection}{\numberline {3.6}EXOR-Gatter}{12}{}%
+\contentsline {subsection}{\numberline {3.7}Halbaddierer}{16}{}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
