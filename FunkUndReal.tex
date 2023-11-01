@@ -438,7 +438,7 @@ In drei der vier möglichen Zustände des ODER-Gatters ist Out auf HIGH. Sind A 
 \newpage
 
 \subsection{Halbaddierer}
-Der schematische Aufbau des Halbaddierers ist in \cite{zimmermann1998binary} abgebildet. Dieses logische Bauteil besitzt zwei Ausgänge. Deshalb wird die Wahrheitstabelle um eine weitere Spalte ergänzt. Die beiden Ausgänge können mit \gqq{$s$} und \gqq{$c_{out}$} (\gqq{carry out}) beschriftet werden. \gqq{$s$} stellt hierbei die Summe der Addition dar. \gqq{$c_{out}$} gibt an, ob sich bei der Rechenoperation ein Überlauf ereignet.\\
+Der schematische Aufbau des Halbaddierers ist in \cite{zimmermann1998binary} abgebildet. Dieses logische Bauteil besitzt zwei Ausgänge. Deshalb wird die Wahrheitstabelle um eine weitere Spalte ergänzt. Die beiden Ausgänge können mit \gqq{$s$} und \gqq{$c_{out}$} (\gqq{carry out}) beschriftet werden. \gqq{$s$} stellt hierbei die Summe der Addition dar. \gqq{$c_{out}$} gibt an, ob sich bei der Rechenoperation ein Überlauf ereignet. Es ergibt sich folgende Wahrheitstabelle:\\
 \begin{figure}[h]
 	\centering
 	\hspace{1cm}
@@ -452,7 +452,7 @@ Der schematische Aufbau des Halbaddierers ist in \cite{zimmermann1998binary} abg
 		1 & 1 & 0 & 1 \\
 		\hline
 	\end{tabular}
-	\caption{Wahrheitstabelle für den Halbaddierer}
+	\caption{Wahrheitstabelle für den Halbaddierer.}
 \end{figure}\\
 Sind A und B auf LOW, so ist $s$ ebenso auf LOW ($0+0=0$). Ist entweder A oder B auf HIGH, so liegt $s$ gleichermaßen auf HIGH ($1+0=1$ bzw. $0+1=1$). Sind A und B auf HIGH, so ereignet sich ein Überlauf ($1+1=10$). $s$ liegt hierbei auf LOW. Allein in diesem Fall liegt $c_{out}$ auf HIGH.\\\\
 Die Umsetzung dieses Bauteils erfolgt durch die Verwendung zweier Logikgatter. Das Verhalten von $s$ ist identisch mit dem des EXOR-Gatters. $c_{out}$ verhält sich übereinstimmend zum UND-Gatter. Wie in \fancyref{EXOR} erwähnt, werden größere Logikschaltungen aus npn-Transistoren instabil. Daher wird zukünftig überwiegend auf vorgefertigte Logikgatter zurückgegriffen.\\
@@ -540,3 +540,26 @@ In dieser Schaltung wurde für das EXOR-Gatter ein vorgefertigtes Bauteil verwen
 	\end{minipage}
 	\caption{Praktischer Aufbau des Halbaddierers in allen möglichen Zuständen. Darstellung der Zustände von $s$ und $c_{out}$ erfolgt durch zwei LEDs.}
 \end{figure}\\
+
+\subsection{Volladdierer}
+Wie in \fancyref{BinarySystem} erwähnt werden zwei Binärzahlen stellenweise addiert. Ereignet sich bei einem dieser Rechenschritte ein Überlauf, muss dieser an die nächsthöhere Stelle übertragen werden. Dort muss er ebenfalls in die Berechnung einfließen. Um dies zu ermöglichen, muss der Halbaddierer um einen dritten logischen Eingang ergänzt werden. Dieser ist auf HIGH, wenn sich bei der Addition der jeweils niedrigeren Stelle ein Überlauf ereignete. Sonst liegt er auf LOW. Der Aufbau des Volladdierers ist in \cite{zimmermann1998binary} veranschaulicht. Daraus leitet sich folgende Wahrheitstabelle ab:\\
+\newpage
+\begin{figure}
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		\textbf{A} & \textbf{B} & \textbf{$c_{in}$} & \textbf{$s$} & \textbf{$c_{out}$} \\
+		\hline
+		0 & 0 & 0 & 0 & 0 \\
+		1 & 0 & 0 & 1 & 0 \\
+		0 & 1 & 0 & 1 & 0 \\
+		1 & 1 & 0 & 0 & 1 \\
+		0 & 0 & 1 & 1 & 0 \\
+		1 & 0 & 1 & 0 & 1 \\
+		1 & 1 & 1 & 1 & 1 \\
+		\hline
+	\end{tabular}
+	\caption{Wahrheitstabelle für den Volladdierer.}
+\end{figure}
+Für die Berechnung von $s$ sind zwei EXOR-Gatter nötig. Im ersten werden A und B verrechnet. Das Ergebnis dieser Operation wird zusammen mit $c_{in}$ im zweiten EXOR-Gatter verarbeitet.\\\\
+Um $c_{out}$ zu berechnen sind zwei UND- und ein ODER-Gatter nötig. Ein UND-Gatter verrechnet $c_{in}$ und das Ergebnis aus A EXOR B. Das zweite lediglich A und B. Die Ausgänge der beiden UND-Gatter werden schließlich durch das ODER-Gatter verarbeitet.
