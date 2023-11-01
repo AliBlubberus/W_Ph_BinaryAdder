@@ -8,10 +8,10 @@
 \contentsline {section}{\numberline {3}Funktionsweise und Realisierung}{6}{}%
 \contentsline {subsection}{\numberline {3.1}Binärsystem und binäre Logik}{6}{}%
 \contentsline {subsection}{\numberline {3.2}UND-Gatter}{7}{}%
-\contentsline {subsection}{\numberline {3.3}ODER-Gatter}{9}{}%
-\contentsline {subsection}{\numberline {3.4}NICHT-Gatter}{11}{}%
-\contentsline {subsection}{\numberline {3.5}NAND-Gatter}{12}{}%
-\contentsline {subsection}{\numberline {3.6}EXOR-Gatter}{14}{}%
-\contentsline {subsection}{\numberline {3.7}Halbaddierer}{18}{}%
-\contentsline {subsection}{\numberline {3.8}Volladdierer}{20}{}%
+\contentsline {subsection}{\numberline {3.3}ODER-Gatter}{10}{}%
+\contentsline {subsection}{\numberline {3.4}NICHT-Gatter}{12}{}%
+\contentsline {subsection}{\numberline {3.5}NAND-Gatter}{13}{}%
+\contentsline {subsection}{\numberline {3.6}EXOR-Gatter}{15}{}%
+\contentsline {subsection}{\numberline {3.7}Halbaddierer}{19}{}%
+\contentsline {subsection}{\numberline {3.8}Volladdierer}{21}{}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

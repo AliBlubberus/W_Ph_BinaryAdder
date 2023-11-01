@@ -539,11 +539,10 @@ In dieser Schaltung wurde für das EXOR-Gatter ein vorgefertigtes Bauteil verwen
 		\includegraphics[height=4cm, keepaspectratio]{./Fotos/HA-11.jpg}
 	\end{minipage}
 	\caption{Praktischer Aufbau des Halbaddierers in allen möglichen Zuständen. Darstellung der Zustände von $s$ und $c_{out}$ erfolgt durch zwei LEDs.}
-\end{figure}\\
+\end{figure}
 
 \subsection{Volladdierer}
-Wie in \fancyref{BinarySystem} erwähnt werden zwei Binärzahlen stellenweise addiert. Ereignet sich bei einem dieser Rechenschritte ein Überlauf, muss dieser an die nächsthöhere Stelle übertragen werden. Dort muss er ebenfalls in die Berechnung einfließen. Um dies zu ermöglichen, muss der Halbaddierer um einen dritten logischen Eingang ergänzt werden. Dieser ist auf HIGH, wenn sich bei der Addition der jeweils niedrigeren Stelle ein Überlauf ereignete. Sonst liegt er auf LOW. Der Aufbau des Volladdierers ist in \cite{zimmermann1998binary} veranschaulicht. Daraus leitet sich folgende Wahrheitstabelle ab:\\
-\newpage
+Wie in \fancyref{BinarySystem} erwähnt werden zwei Binärzahlen stellenweise addiert. Ereignet sich bei einem dieser Rechenschritte ein Überlauf, muss dieser an die nächsthöhere Stelle übertragen werden. Dort muss er ebenfalls in die Berechnung einfließen. Um dies zu ermöglichen, muss der Halbaddierer um einen dritten logischen Eingang ergänzt werden. Dieser ist auf HIGH, wenn sich bei der Addition der jeweils niedrigeren Stelle ein Überlauf ereignete. Sonst liegt er auf LOW. Der Aufbau des Volladdierers ist in \cite{zimmermann1998binary} veranschaulicht.\\
 \begin{figure}
 	\centering
 	\begin{tabular}{|c|c|c|c|c|}
@@ -560,6 +559,122 @@ Wie in \fancyref{BinarySystem} erwähnt werden zwei Binärzahlen stellenweise ad
 		\hline
 	\end{tabular}
 	\caption{Wahrheitstabelle für den Volladdierer.}
-\end{figure}
+\end{figure}\\
 Für die Berechnung von $s$ sind zwei EXOR-Gatter nötig. Im ersten werden A und B verrechnet. Das Ergebnis dieser Operation wird zusammen mit $c_{in}$ im zweiten EXOR-Gatter verarbeitet.\\\\
-Um $c_{out}$ zu berechnen sind zwei UND- und ein ODER-Gatter nötig. Ein UND-Gatter verrechnet $c_{in}$ und das Ergebnis aus A EXOR B. Das zweite lediglich A und B. Die Ausgänge der beiden UND-Gatter werden schließlich durch das ODER-Gatter verarbeitet.
+Um $c_{out}$ zu berechnen sind zwei UND- und ein ODER-Gatter nötig. Ein UND-Gatter verrechnet $c_{in}$ und das Ergebnis aus A EXOR B. Das zweite lediglich A und B. Die Ausgänge der beiden UND-Gatter werden schließlich durch das ODER-Gatter verarbeitet.\\
+\begin{figure}[h!]
+	\centering
+	\begin{circuitikz}
+		
+		% EXOR IC
+		
+		\draw[black, thick] (-1, 2) -- (2, 2) -- (2, -2) -- (-1, -2) -- cycle;
+		\draw[black, thick] (.25, 2) .. controls (.25, 1.5) and (.75, 1.5) .. (.75, 2);
+		
+		
+		\draw (-1, 1.5) node[right]{$A_1$};
+		\draw (-1, 1) node[right]{$B_1$};
+		\draw (-1, .5) node[right]{$Y_1$};
+		
+		\draw (-1, 0) node[right]{$A_2$};
+		\draw (-1, -.5) node[right]{$B_2$};
+		\draw (-1, -1) node[right]{$Y_2$};
+		
+		\draw (-1, -1.5) node[right]{$\text{GND}$};
+		
+		
+		\draw (2, 1.5) node[left]{$\text{VCC}$};
+		\draw (2, 1) node[left]{$B_4$};
+		\draw (2, .5) node[left]{$A_4$};
+		
+		\draw (2, 0) node[left]{$Y_4$};
+		\draw (2, -.5) node[left]{$B_3$};
+		\draw (2, -1) node[left]{$A_3$};
+		
+		\draw (2, -1.5) node[left]{$Y_3$};
+		
+		\draw[gray] (.5, -2) node[below]{EXOR};
+		
+		% END EXOR IC
+		
+		\draw (-1, -1) to[short] (-2, -1) to[short] (-2, 4) to[short, -o] (7, 4) node[right]{$s$};
+		
+		\draw (-1, -1.5) to[short] (-1.5, -1.5) to[short] (-1.5, -3) node[ground]{};
+		\draw (2, 1.5) to[short] (2.5, 1.5) to[short, -o] (2.5, 3) node[above]{$VCC$};
+		
+		\draw (-9, 0) node[left]{A} to[short, o-] (-4.5, 0) to[short] (-4.5, 1.5) to[short] (-1, 1.5);
+		\draw (-9, -1) node[left]{B} to[short, o-] (-4, -1) to[short] (-4, 1) to[short] (-1, 1);
+		
+		\draw (-1, .5) to[short] (-1.5, .5) to[short] (-1.5, 0) to[short] (-1, 0);
+		\draw (-1, -.5) to[short] (-3.5, -.5) to[short] (-3.5, -2) to[short, -o] (-9, -2) node[left]{$c_{in}$};
+		
+		
+		\draw (-4, -5) node[npn](T1){$T_1$};
+		\draw (-4, -7) node[npn](T2){$T_2$};
+		
+		\draw (T1.E) to[short] (T2.C);
+		\draw (T1.C) to[short, -o] ++(0, 1) node[above]{$VCC$};
+		
+		\draw (T1.B) to[R, l=$R_1$, a=\SI{1}{k\ohm}] (-6.5, -5) to[short, -*] (-6.5, 0);
+		\draw (T2.B) to[R, l=$R_2$, a=\SI{1}{k\ohm}] (-6.5, -7) to[short] (-7, -7) to[short, -*] (-7, -1);
+		
+		\draw (T2.E) to[short] (-4, -8.5) to[R, l=$R_3$, a=\SI{1}{k\ohm}] (-4, -10.5) node[ground]{};
+		
+		
+		\draw (0, -5) node[npn](T3){$T_3$};
+		\draw (0, -7) node[npn](T4){$T_4$};
+		
+		\draw (T3.E) to[short] (T4.C);
+		\draw (T3.C) to[short, -o] ++(0, 1) node[above]{$VCC$};
+		
+		\draw (T3.B) to[R, l=$R_4$, a=\SI{1}{k\ohm}] (-2.5, -5) to[short, -*] (-2.5, -.5);		
+		\draw (T4.B) to[R, l=$R_5$, a=\SI{1}{k\ohm}] (-2.5, -7) to[short] (-3, -7) to[short] (-3, .5) to[short, -*] (-1.5, .5);
+		
+		\draw (T4.E) to[short] (0, -8.5) to[R, l=$R_6$, a=\SI{1}{k\ohm}] (-0, -10.5) node[ground]{};
+		
+		
+		% OR IC
+		
+		\draw[black, thick] (2, -2.5) -- (5, -2.5) -- (5, -6.5) -- (2, -6.5) -- cycle;
+		\draw[black, thick] (3.25, -2.5) .. controls (3.25, -3) and (3.75, -3) .. (3.75, -2.5);
+		
+		\draw (2, -3) node[right]{$A_1$};
+		\draw (2, -3.5) node[right]{$B_1$};
+		\draw (2, -4) node[right]{$Y_1$};
+		
+		\draw (2, -4.5) node[right]{$A_2$};
+		\draw (2, -5) node[right]{$B_2$};
+		\draw (2, -5.5) node[right]{$Y_2$};
+		
+		\draw (2, -6) node[right]{$\text{GND}$};
+		
+		\draw (5, -3) node[left]{$\text{VCC}$};
+		
+		\draw (5, -3.5) node[left]{$B_4$};
+		\draw (5, -4) node[left]{$A_4$};
+		\draw (5, -4.5) node[left]{$Y_4$};
+		
+		\draw (5, -5) node[left]{$B_3$};
+		\draw (5, -5.5) node[left]{$A_3$};
+		\draw (5, -6) node[left]{$Y_3$};
+		
+		\draw[gray] (3.5, -6.5) node[below]{ODER};
+		
+		% END OR IC
+		
+		\draw (0, -8) to[short, *-] (.6, -8) to[short] (.6, -3) to[short] (2, -3);
+		\draw (-4, -8.5) to[short, *-] (1, -8.5) to[short] (1, -3.5) to[short] (2, -3.5);
+		
+		\draw (5, -3) to[short] (5.5, -3) to[short, -o] (5.5, -1) node[above]{$VCC$};
+		\draw (2, -6) to[short] (1.6, -6) to[short] (1.6, -7) node[ground]{};
+		
+		\draw (2, -4) to[short] (1.3, -4) to[short] (1.3, -8) to[short, -o] (7, -8) node[right]{$c_{out}$};
+		
+		\draw[gray, very thick, densely dashed] (-8, 5) -- (6.25, 5) -- (6.25, -11.5) -- (-8, -11.5) -- cycle;
+		\draw (-1, -11.5) node[below, gray]{Volladdierer};
+		
+	\end{circuitikz}
+	\caption{Schaltplan für den Volladdierer, bestehend aus EXOR-, UND- und ODER-Gattern.}
+\end{figure}\\
+Wie im Schaltplan zu sehen, wurden für die EXOR- und ODER-Gatter fertige Bauteile verwendet. Auch das ODER-Gatter stammt von Texas Instruments und hat die Modellbezeichnung SN74HC32N.\\\\
+Als Stromquelle für diesen Schaltkreis wurde eine $9\,V$-Batterie gewählt. Da diese Spannung für die verwendeten Logikbauteile aber zu hoch wäre, wurde ein $5\,V$-Spannungsregler (78S05) verwendet. Zusätzlich wurden zwei $\SI{100}{\nano\farad}$-Kondensatoren verbaut. Diese liegen jeweils zwischen dem gemeinsamen Bezugspotenzial und der Batterie- bzw. Ausgangsspannung. Sie dämpfen das System und verhindern, dass der Spannungsregler bei Lastspitzen zu Schwingen beginnt.
