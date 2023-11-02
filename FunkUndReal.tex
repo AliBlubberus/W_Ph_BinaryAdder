@@ -677,4 +677,49 @@ Um $c_{out}$ zu berechnen sind zwei UND- und ein ODER-Gatter nötig. Ein UND-Gat
 	\caption{Schaltplan für den Volladdierer, bestehend aus EXOR-, UND- und ODER-Gattern.}
 \end{figure}\\
 Wie im Schaltplan zu sehen, wurden für die EXOR- und ODER-Gatter fertige Bauteile verwendet. Auch das ODER-Gatter stammt von Texas Instruments und hat die Modellbezeichnung SN74HC32N.\\\\
-Als Stromquelle für diesen Schaltkreis wurde eine $9\,V$-Batterie gewählt. Da diese Spannung für die verwendeten Logikbauteile aber zu hoch wäre, wurde ein $5\,V$-Spannungsregler (78S05) verwendet. Zusätzlich wurden zwei $\SI{100}{\nano\farad}$-Kondensatoren verbaut. Diese liegen jeweils zwischen dem gemeinsamen Bezugspotenzial und der Batterie- bzw. Ausgangsspannung. Sie dämpfen das System und verhindern, dass der Spannungsregler bei Lastspitzen zu Schwingen beginnt.
+Als Stromquelle für diesen Schaltkreis wurde eine $9\,V$-Batterie gewählt. Da diese Spannung für die verwendeten Logikbauteile aber zu hoch wäre, wurde ein $5\,V$-Spannungsregler (78S05) verwendet. Zusätzlich wurden zwei $\SI{100}{\nano\farad}$-Kondensatoren verbaut. Diese liegen jeweils zwischen dem gemeinsamen Bezugspotenzial und der Batterie- bzw. Ausgangsspannung. Sie dämpfen das System und verhindern, dass der Spannungsregler bei Lastspitzen zu Schwingen beginnt.\\\\
+Addiert man zwei achtstellige Binärzahlen, so kann dies durch mithilfe diesen Schaltkreises in acht Schritten erfolgen. Die beiden Zahlen werden stellenweise Addiert. Ereignet sich bei einem Schritt ein Überlauf ($c_{out}$ auf HIGH), so wird beim nächsten Rechenschritt $c_{in}$ auf HIGH gesetzt. Die Werte der logischen Eingänge werden hier durch Kippschalter gesetzt. Die Zustände der Ausgänge werden durch eine rote ($s$) und eine grüne ($c_{out}$) LED angezeigt. Addiert man beispielsweise die Zahlen $123_{10}\,\widehat{=}\,01111011_2$ und $69_{10}\,\widehat{=}\,01000101_2$, so ergibt sich die Zahl $192_{10}\,\widehat{=}\,11000000_2$.\\
+\newpage
+\begin{figure}[h!]
+	\centering
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[height=4cm, keepaspectratio]{./Fotos/FA-0.jpg}
+		\vspace{.5cm}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[height=4cm, keepaspectratio]{./Fotos/FA-1.jpg}
+		\vspace{.5cm}
+	\end{minipage}
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[height=4cm, keepaspectratio]{./Fotos/FA-2.jpg}
+		\vspace{.5cm}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[height=4cm, keepaspectratio]{./Fotos/FA-3.jpg}
+		\vspace{.5cm}
+	\end{minipage}
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[height=4cm, keepaspectratio]{./Fotos/FA-4.jpg}
+		\vspace{.5cm}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[height=4cm, keepaspectratio]{./Fotos/FA-5.jpg}
+		\vspace{.5cm}
+	\end{minipage}
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[height=4cm, keepaspectratio]{./Fotos/FA-6.jpg}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[height=4cm, keepaspectratio]{./Fotos/FA-7.jpg}
+	\end{minipage}
+	\caption{Durchführung einer Addition von zwei achtstelligen Binärzahlen durch den fertig realisierten Volladdierer.}
+\end{figure}
+\newpage
