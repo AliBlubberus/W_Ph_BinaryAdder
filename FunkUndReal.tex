@@ -1,8 +1,8 @@
 \subsection{Binärsystem und binäre Logik} \label{BinarySystem}
-In \cite{konradz1z2} und \cite{bruderer2011konrad} ist zu erkennen, dass nahezu alle ersten Rechenmaschinen mit dem Binärsystem arbeiteten. Wie in \cite{zimmermann1998binary} beschrieben, findet dieses Zahlensystem auch in heutigen Computern Anwendung. Hierbei werden allerdings weder Relais, noch Elektronenröhren eingesetzt. Stattdessen benutzt man Transistoren, da diese unter anderem im mikroskopischem Maßstab angefertigt werden können. Dadurch sind moderne Prozessoren besonders platzsparend und leistungsstark. Die Transistoren agieren analog zu den damals verwendeten Relais als Schalter.\\\\
+In \cite{konradz1z2} und \cite{bruderer2011konrad} ist zu erkennen, dass nahezu alle ersten Rechenmaschinen mit dem Binärsystem arbeiteten. Wie in \cite{zimmermann1998binary} beschrieben, findet dieses Zahlensystem auch in heutigen Computern Anwendung. Hierbei werden allerdings weder Relais, noch Elektronenröhren eingesetzt. Stattdessen benutzt man Transistoren, da diese in extrem kleinen Abmessungen gefertigt werden können. Zudem verbrauchen Transistoren weitaus weniger Strom und können wesentlich schneller schalten. Dadurch sind moderne Prozessoren besonders platzsparend und leistungsstark. Die Transistoren agieren analog zu den damals verwendeten Relais als Schalter.\\\\
 Das Dezimalsystem (\glqq{}decem\grqq{} $\widehat{=}$ zehn) ist das konventionelle Zahlensystem, welches in der Mathematik benutzt wird. Hierbei kann jede Stelle einer Zahl einen von zehn möglichen Zuständen annehmen (0-9). Bei der Darstellung größerer Zahlen, muss auf zusätzliche Stellen zurückgegriffen werden. Jede Stelle einer Zahl im Dezimalsystem hat den zehnfachen Wert der jeweils rechten.\\\\
-Im Binärsystem (\glqq{}bi\grqq{} $\widehat{=}$ zwei) stehen für eine Stelle lediglich zwei Zustände zur Auswahl (0 und 1). Das darstellen der Zahl zwei im Binärsystem ist mit nur einer Stelle nicht möglich. Hier muss bereits die nächsthöhere verwendet werden. Die Zahl zwei im Binärsystem wird also als $10$ dargestellt. Erhöht man diese Zahl um den Wert $1$, so ergibt sich $11$. Führt man dies ein weiteres Mal fort, so findet in der ersten Stelle ein \glqq{}Überlauf\grqq{} statt. Das bedeutet, dass der maximale Zahlenbereich dieser Stelle überschritten wurde. Diese beginnt wieder bei null, und die jeweils linke Stelle wird um eins erhöht. Bei $11 + 1$ geschieht dies zweimal, es ergibt sich $100$.\\\\
-Jede Stelle einer Zahl im Binärsystem hat den zweifachen Wert der jeweils rechten. Übersetzt man eine Zahl vom Binärsystem zum Dezimalsystem, so betrachtet man alle Stellen mit dem Zustand $1$. Deren Wertigkeiten werden anschließend summiert. Die Binärzahl $1011$ entspricht also $1*8 + 0*4 + 1*2 + 1*1 = 11$ im Dezimalsystem.\\\\
+Im Binärsystem (\glqq{}bi\grqq{} $\widehat{=}$ zwei) stehen für eine Stelle lediglich zwei Zustände zur Auswahl (0 und 1). Das darstellen der Zahl zwei im Binärsystem ist mit nur einer Stelle nicht möglich. Hier muss bereits die nächsthöhere verwendet werden. Die Zahl zwei im Binärsystem wird also als $10_2$ dargestellt. Erhöht man diese Zahl um den Wert $1$, so ergibt sich $11_2$. Führt man dies ein weiteres Mal fort, so findet in der ersten Stelle ein \glqq{}Überlauf\grqq{} statt. Das bedeutet, dass der maximale Zahlenbereich dieser Stelle überschritten wurde. Diese beginnt wieder bei null, und die jeweils linke Stelle wird um eins erhöht. Bei $11_2 + 1$ geschieht dies zweimal, es ergibt sich $100_2$.\\\\
+Jede Stelle einer Zahl im Binärsystem hat den zweifachen Wert der jeweils rechten. Übersetzt man eine Zahl vom Binärsystem zum Dezimalsystem, so betrachtet man alle Stellen mit dem Zustand $1$. Deren Wertigkeiten werden anschließend summiert. Die Binärzahl $1011_2$ entspricht also $1*8 + 0*4 + 1*2 + 1*1 = 11$ im Dezimalsystem.\\\\
 Die Addition zweier Zahlen im Binärsystem funktioniert ähnlich wie im Dezimalsystem. Es werden zunächst die ersten Stellen der beiden Zahlen addiert. Ereignet sich ein Überlauf, so wird eine weitere 1 zur nächsthöheren Stelle übertragen. Dieser Prozess setzt sich bis zur höchsten Stelle fort. Wie in \cite{zimmermann1998binary} zu sehen, ist der Binäraddierer ein elektronisches Bauteil, welches lediglich eine Stelle zweier Binärzahlen addieren kann. Jedoch können auch größere Zahlen summiert werden. Um beispielsweise zwei achtstellige Binärzahlen zu addieren, sind acht Binäraddierer nötig. Jedes dieser Bauteile ist für die Addition einer Stelle der beiden Zahlen zuständig.\\\\
 Ein Binäraddierer ist aus einzelnen Logikgattern zusammengesetzt. Diese sind kleine Schaltkreise, welche einfache Rechenoperationen mit binären Werten durchführen. Sie enthalten einen oder mehrere Ein- und Ausgabeanschlüsse. Die Funktionsweise eines Logikgatters wird, wie in \cite{rigotti2003digitale} gezeigt, mithilfe von Wahrheitstabellen veranschaulicht. Diese Tabellen zeigen die Zustände der Ausgabeanschlüsse in Abhängigkeit von denen der Eingabeanschlüsse.
 
@@ -47,7 +47,6 @@ Setzt man A oder B auf HIGH, sorgt dies dafür, dass der jeweilige Transistor du
 \end{figure}\\
 Die obenstehende Abbildung zeigt meinen Entwurf für das logische UND-Gatter. Die Eingabeanschlüsse A und B sind jeweils mit der Basis eines npn-Transistors verbunden. Dabei wurde an jeder Basis ein Vorwiderstand von $1000\,\Omega$ installiert, um den Basisstrom auf ein angemessenes Niveau ($\approx 3,0\, mA$) zu begrenzen. In \cite{zimmermann1998binary} wird gezeigt, dass in der Praxis auf \glqq{}CMOS\grqq{}-Transistoren zurückgegriffen wird. Diese sind für Logikschaltkreise optimaler, da sie auch mit sehr niedrigen Spannungen arbeiten können. Für einfache Logikschaltkreise sind npn-Transistoren allerdings ebenso geeignet.\\\\
 Sind sowohl A als auch B auf HIGH (hier: $VCC=3,0\,V$), so schalten $T_1$ und $T_2$ durch. Somit liegt Out ebenso auf HIGH. Ist mindestens einer der beiden Eingabeanschlüsse auf LOW, so ist die Verbindung zwischen Out und der Versorgungsspannung unterbrochen. Somit wäre Out ein offener Kontakt. Dieser könnte durch äußere Einflüsse, wie elektromagnetische Störsignale, nachfolgende Transistoren ungewollt ansteuern. Um dies zu verhindern, ist Out durch einen Widerstand mit dem Nullniveau verbunden.\\
-\newpage
 \begin{figure}[h!]
 	\begin{minipage}{.5\textwidth}
 		\centering
@@ -68,7 +67,7 @@ Sind sowohl A als auch B auf HIGH (hier: $VCC=3,0\,V$), so schalten $T_1$ und $T
 		\includegraphics[height=4cm, keepaspectratio]{./Fotos/UND-11.jpg}
 	\end{minipage}
 	\caption{Praktischer Aufbau des UND-Gatters in allen möglichen Zuständen.}
-\end{figure}
+\end{figure}\\
 Diese Abbildung zeigt das logische UND-Gatter auf einem Steckbrett. Die vier möglichen Zustände der Eingabeanschlüsse sind durch die blauen Drähte gegen \glqq{}+\grqq{} erkennbar. Im letzten Bild sind A und B durch diese Drähte mit HIGH verbunden. Die dadurch anliegende Spannung an Out ist durch die leuchtende LED zu erkennen.
 
 \subsection{ODER-Gatter}
@@ -149,7 +148,7 @@ Diese Abbildung beschreibt den Aufbau eines ODER-Gatters. Analog zum UND-Gatter 
 	\end{tabular}
 	\caption{Wahrheitstabelle für das logische NICHT-Gatter}
 \end{figure}
-Das NICHT-Gatter besitzt lediglich einen Eingabeanschluss. Daher kann dieser auch als \glqq{}In\grqq{} bezeichnet werden. Out zeigt hier den gegenteiligen Zustand von In. So liegt Out beispielsweise auf HIGH, wenn In auf LOW gesetzt ist. Um dieses Verhalten zu erzielen muss Out konstant mit der Versorgungsspannung verbunden sein. Liegt In auf HIGH, so soll die Spannung an Out auf $\approx0\,V$ abfallen. In steuert also einen Transistor an, welcher beim Durchschalten Out mit dem Nullniveau verbindet. Da dies einen Kurzschluss zwischen Plus- und Minuspol ergeben würde, muss gegen Plus ein Widerstand installiert werden.
+Das NICHT-Gatter besitzt lediglich einen Eingabeanschluss. Daher kann dieser auch als \glqq{}In\grqq{} bezeichnet werden. Out zeigt hier den gegenteiligen Zustand von In. So liegt Out beispielsweise auf HIGH, wenn In auf LOW gesetzt ist. Um dieses Verhalten zu erzielen muss Out konstant mit der Versorgungsspannung verbunden sein. Liegt In auf HIGH, so soll die Spannung an Out auf $\approx0\,V$ abfallen. In steuert also einen Transistor an, welcher beim Durchschalten Out mit dem Nullniveau verbindet. Da dies einen Kurzschluss zwischen Plus- und Minuspol ergeben würde, muss gegen Plus ein Widerstand installiert werden.\\
 \begin{figure}[h!]
 	\centering
 	\begin{circuitikz}
@@ -199,7 +198,7 @@ Wie im Schaltplan zu erkennen, liegt Out durch einen $1000\,\Omega$-Widerstand a
 \end{figure}
 Wie in der Wahrheitstabelle zu erkennen, liegt Out auf HIGH, solange nicht A und B auf HIGH gesetzt sind. Das Verhalten dieses Gatters ist also gegenteilig zu dem des UND-Gatters. Der Name \gqq{NAND} setzt sich aus \gqq{NOT} und \gqq{AND} zusammen. Für das gewünschte Verhalten muss die Ausgabe eines UND-Gatters als Eingabe für ein NICHT-Gatter genutzt werden.\\\\
 Die Vorwiderstände an der Basis von $T_1$ und $T_2$ betragen hier jeweils $2\,k\Omega$, um den Stromfluss zwischen Basis und Emitter zu minimieren ($I_{BE} \approx 0.5\,mA$). Dies verhindert, dass durch $I_{BE}$ $T_3$ durchschaltet, wenn nur B auf HIGH liegt. Um zu verhindern, dass $U_{E,T2}$ zu sehr abfällt, wird dort gegen das Nullpotenzial ein Widerstand von $330\Omega$, statt $100\Omega$ verwendet. Der Aufbau des NICHT-Gatters bleibt unverändert.\\\\
-Wenn A oder B auf LOW gesetzt ist, wird die Basis von $T_3$ durch $R_3$ und $R_4$ auf dass Nullniveau gesenkt. Ist nur B auf HIGH gesetzt, so liegt wegen $I_{BE,T2}$ an der Basis von $T_3$ eine kleine Spannung $U_{BE,T_3} \approx 0.3\,V$ an. Diese genügt jedoch nicht, um den Transistor durchzuschalten. Erst wenn A und B auf HIGH liegen, fällt durch $T_3$ die Spannung an Out ab.\\
+Wenn A oder B auf LOW gesetzt ist, wird die Basis von $T_3$ durch $R_3$ und $R_4$ auf das Nullniveau gesenkt. Ist nur B auf HIGH gesetzt, so liegt wegen $I_{BE,T2}$ an der Basis von $T_3$ eine kleine Spannung $U_{BE,T_3} \approx 0.3\,V$ an. Diese genügt jedoch nicht, um den Transistor durchzuschalten. Erst wenn A und B auf HIGH liegen, fällt durch $T_3$ die Spannung an Out ab.\\
 \begin{figure}[h!]
 	\centering
 	\begin{circuitikz}
@@ -269,7 +268,6 @@ Wenn A oder B auf LOW gesetzt ist, wird die Basis von $T_3$ durch $R_3$ und $R_4
 	\end{minipage}
 	\caption{Praktischer Aufbau des NAND-Gatters in allen möglichen Zuständen.}
 \end{figure}~\\
-\newpage
 
 \subsection{EXOR-Gatter} \label{EXOR}
 \begin{figure}[h]
@@ -454,7 +452,7 @@ Der schematische Aufbau des Halbaddierers ist in \cite{zimmermann1998binary} abg
 	\end{tabular}
 	\caption{Wahrheitstabelle für den Halbaddierer.}
 \end{figure}\\
-Sind A und B auf LOW, so ist $s$ ebenso auf LOW ($0+0=0$). Ist entweder A oder B auf HIGH, so liegt $s$ gleichermaßen auf HIGH ($1+0=1$ bzw. $0+1=1$). Sind A und B auf HIGH, so ereignet sich ein Überlauf ($1+1=10$). $s$ liegt hierbei auf LOW. Allein in diesem Fall liegt $c_{out}$ auf HIGH.\\\\
+Sind A und B auf LOW, so ist $s$ ebenso auf LOW ($0+0=0_2$). Ist entweder A oder B auf HIGH, so liegt $s$ gleichermaßen auf HIGH ($1+0=1_2$ bzw. $0+1=1_2$). Sind A und B auf HIGH, so ereignet sich ein Überlauf ($1+1=10_2$). $s$ liegt hierbei auf LOW. Allein in diesem Fall liegt $c_{out}$ auf HIGH.\\\\
 Die Umsetzung dieses Bauteils erfolgt durch die Verwendung zweier Logikgatter. Das Verhalten von $s$ ist identisch mit dem des EXOR-Gatters. $c_{out}$ verhält sich übereinstimmend zum UND-Gatter. Wie in \fancyref{EXOR} erwähnt, werden größere Logikschaltungen aus npn-Transistoren instabil. Daher wird zukünftig überwiegend auf vorgefertigte Logikgatter zurückgegriffen.\\
 \begin{figure}[h!]
 	\centering
@@ -542,7 +540,7 @@ In dieser Schaltung wurde für das EXOR-Gatter ein vorgefertigtes Bauteil verwen
 \end{figure}
 
 \subsection{Volladdierer}
-Wie in \fancyref{BinarySystem} erwähnt werden zwei Binärzahlen stellenweise addiert. Ereignet sich bei einem dieser Rechenschritte ein Überlauf, muss dieser an die nächsthöhere Stelle übertragen werden. Dort muss er ebenfalls in die Berechnung einfließen. Um dies zu ermöglichen, muss der Halbaddierer um einen dritten logischen Eingang ergänzt werden. Dieser ist auf HIGH, wenn sich bei der Addition der jeweils niedrigeren Stelle ein Überlauf ereignete. Sonst liegt er auf LOW. Der Aufbau des Volladdierers ist in \cite{zimmermann1998binary} veranschaulicht.\\
+Wie in \fancyref{BinarySystem} erwähnt, werden zwei Binärzahlen stellenweise addiert. Ereignet sich bei einem dieser Rechenschritte ein Überlauf, muss dieser an die nächsthöhere Stelle übertragen werden. Dort muss er ebenfalls in die Berechnung einfließen. Um dies zu ermöglichen, muss der Halbaddierer um einen dritten logischen Eingang ergänzt werden. Dieser ist auf HIGH, wenn sich bei der Addition der jeweils niedrigeren Stelle ein Überlauf ereignete. Sonst liegt er auf LOW. Der Aufbau des Volladdierers ist in \cite{zimmermann1998binary} veranschaulicht.\\
 \begin{figure}
 	\centering
 	\begin{tabular}{|c|c|c|c|c|}
@@ -678,47 +676,55 @@ Um $c_{out}$ zu berechnen sind zwei UND- und ein ODER-Gatter nötig. Ein UND-Gat
 \end{figure}\\
 Wie im Schaltplan zu sehen, wurden für die EXOR- und ODER-Gatter fertige Bauteile verwendet. Auch das ODER-Gatter stammt von Texas Instruments und hat die Modellbezeichnung SN74HC32N.\\\\
 Als Stromquelle für diesen Schaltkreis wurde eine $9\,V$-Batterie gewählt. Da diese Spannung für die verwendeten Logikbauteile aber zu hoch wäre, wurde ein $5\,V$-Spannungsregler (78S05) verwendet. Zusätzlich wurden zwei $\SI{100}{\nano\farad}$-Kondensatoren verbaut. Diese liegen jeweils zwischen dem gemeinsamen Bezugspotenzial und der Batterie- bzw. Ausgangsspannung. Sie dämpfen das System und verhindern, dass der Spannungsregler bei Lastspitzen zu Schwingen beginnt.\\\\
-Addiert man zwei achtstellige Binärzahlen, so kann dies durch mithilfe diesen Schaltkreises in acht Schritten erfolgen. Die beiden Zahlen werden stellenweise Addiert. Ereignet sich bei einem Schritt ein Überlauf ($c_{out}$ auf HIGH), so wird beim nächsten Rechenschritt $c_{in}$ auf HIGH gesetzt. Die Werte der logischen Eingänge werden hier durch Kippschalter gesetzt. Die Zustände der Ausgänge werden durch eine rote ($s$) und eine grüne ($c_{out}$) LED angezeigt. Addiert man beispielsweise die Zahlen $123_{10}\,\widehat{=}\,01111011_2$ und $69_{10}\,\widehat{=}\,01000101_2$, so ergibt sich die Zahl $192_{10}\,\widehat{=}\,11000000_2$.\\
+Addiert man zwei achtstellige Binärzahlen, so kann dies mithilfe dieses Schaltkreises in acht Schritten erfolgen. Die beiden Zahlen werden stellenweise addiert. Ereignet sich bei einem Schritt ein Überlauf ($c_{out}$ auf HIGH), so wird beim nächsten Rechenschritt $c_{in}$ auf HIGH gesetzt. Die Werte der logischen Eingänge werden hier durch Kippschalter gesetzt. Die Zustände der Ausgänge werden durch eine rote ($s$) und eine grüne ($c_{out}$) LED angezeigt. Addiert man beispielsweise die Zahlen $123_{10}\,\widehat{=}\,01111011_2$ und $69_{10}\,\widehat{=}\,01000101_2$, so ergibt sich die Zahl $192_{10}\,\widehat{=}\,11000000_2$.\\
 \newpage
 \begin{figure}[h!]
 	\centering
 	\begin{minipage}{.5\textwidth}
 		\centering
-		\includegraphics[height=4cm, keepaspectratio]{./Fotos/FA-0.jpg}
+		\includegraphics[height=4cm, keepaspectratio]{./Fotos/FA-0.jpg}\\
+		Erste Stellen: $1 + 1$, $c_{in}=0$
 		\vspace{.5cm}
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 		\centering
-		\includegraphics[height=4cm, keepaspectratio]{./Fotos/FA-1.jpg}
+		\includegraphics[height=4cm, keepaspectratio]{./Fotos/FA-1.jpg}\\
+		Zweite Stellen: $1 + 0$, $c_{in}=1$
 		\vspace{.5cm}
 	\end{minipage}
 	\begin{minipage}{.5\textwidth}
 		\centering
-		\includegraphics[height=4cm, keepaspectratio]{./Fotos/FA-2.jpg}
+		\includegraphics[height=4cm, keepaspectratio]{./Fotos/FA-2.jpg}\\
+		Dritte Stellen: $0 + 1$, $c_{in}=1$
 		\vspace{.5cm}
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 		\centering
-		\includegraphics[height=4cm, keepaspectratio]{./Fotos/FA-3.jpg}
+		\includegraphics[height=4cm, keepaspectratio]{./Fotos/FA-3.jpg}\\
+		Vierte Stellen: $1 + 0$, $c_{in}=1$
 		\vspace{.5cm}
 	\end{minipage}
 	\begin{minipage}{.5\textwidth}
 		\centering
-		\includegraphics[height=4cm, keepaspectratio]{./Fotos/FA-4.jpg}
+		\includegraphics[height=4cm, keepaspectratio]{./Fotos/FA-4.jpg}\\
+		Fünfte Stellen: $1 + 0$, $c_{in}=1$
 		\vspace{.5cm}
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 		\centering
-		\includegraphics[height=4cm, keepaspectratio]{./Fotos/FA-5.jpg}
+		\includegraphics[height=4cm, keepaspectratio]{./Fotos/FA-5.jpg}\\
+		Sechste Stellen: $1 + 0$, $c_{in}=1$
 		\vspace{.5cm}
 	\end{minipage}
 	\begin{minipage}{.5\textwidth}
 		\centering
-		\includegraphics[height=4cm, keepaspectratio]{./Fotos/FA-6.jpg}
+		\includegraphics[height=4cm, keepaspectratio]{./Fotos/FA-6.jpg}\\
+		Siebte Stellen: $1 + 1$, $c_{in}=1$
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 		\centering
-		\includegraphics[height=4cm, keepaspectratio]{./Fotos/FA-7.jpg}
+		\includegraphics[height=4cm, keepaspectratio]{./Fotos/FA-7.jpg}\\
+		Achte Stellen: $0 + 0$, $c_{in}=1$
 	\end{minipage}
 	\caption{Durchführung einer Addition von zwei achtstelligen Binärzahlen durch den fertig realisierten Volladdierer.}
 \end{figure}

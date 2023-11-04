@@ -1,0 +1,26 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Wahrheitstabelle für das logische UND-Gatter}}{7}{}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Schaltplan für die logische UND-Schaltung mithilfe von npn-Transistoren.}}{8}{}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Praktischer Aufbau des UND-Gatters in allen möglichen Zuständen.}}{9}{}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Wahrheitstabelle für das logische ODER-Gatter}}{9}{}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Schaltplan für die logische ODER-Schaltung mithilfe von npn-Transistoren.}}{10}{}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Praktischer Aufbau des ODER-Gatters in allen möglichen Zuständen.}}{11}{}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Wahrheitstabelle für das logische NICHT-Gatter}}{11}{}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Schaltplan für die logische NICHT-Schaltung mithilfe von npn-Transistoren.}}{12}{}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Praktischer Aufbau des NICHT-Gatters in allen möglichen Zuständen.}}{12}{}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Wahrheitstabelle für das logische NAND-Gatter}}{12}{}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Schaltplan für die logische NAND-Schaltung mithilfe von npn-Transistoren. Zusammengesetzt aus NICHT- und UND-Gatter.}}{13}{}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Messwerte der Basis-Emitter-Spannung von $T_3$ für alle möglichen Zustände von A und B im NAND-Gatter.}}{13}{}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Praktischer Aufbau des NAND-Gatters in allen möglichen Zuständen.}}{14}{}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Wahrheitstabelle für das logische EXOR-Gatter}}{14}{}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Unoptimierter Schaltplan für die logische EXOR-Schaltung mithilfe von npn-Transistoren. Zusammengesetzt aus NAND-, ODER- und UND-Gatter.}}{15}{}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Optimierter Schaltplan für die logische NAND-Schaltung, bestehend aus lediglich zwei Transistoren.}}{16}{}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Optimierter Schaltplan für die logische EXOR-Schaltung, bestehend aus lediglich vier Transistoren.}}{17}{}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Praktischer Aufbau des EXOR-Gatters in allen möglichen Zuständen.}}{18}{}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Wahrheitstabelle für den Halbaddierer.}}{18}{}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Schaltplan für den Halbaddierer, bestehend aus jeweils einem EXOR- und UND-Gatter.}}{19}{}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Praktischer Aufbau des Halbaddierers in allen möglichen Zuständen. Darstellung der Zustände von $s$ und $c_{out}$ erfolgt durch zwei LEDs.}}{20}{}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Wahrheitstabelle für den Volladdierer.}}{21}{}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Schaltplan für den Volladdierer, bestehend aus EXOR-, UND- und ODER-Gattern.}}{21}{}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Durchführung einer Addition von zwei achtstelligen Binärzahlen durch den fertig realisierten Volladdierer.}}{23}{}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

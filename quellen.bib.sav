@@ -1,3 +1,23 @@
+@TechReport{bruderer2011konrad,
+  author      = {Bruderer, Herbert},
+  institution = {ETH Zurich},
+  title       = {Konrad Zuse und die Schweiz: Relaisrechner Z4 an der ETH Z{\"u}rich: Rechenlocher M9 f{\"u}r die Schweizer Remington Rand: Eigenbau des R{\"o}hrenrechners ERMETH: Zeitzeugenbericht zur Z4: unbekannte Dokumente zur M9: ein Beitrag zu den Anf{\"a}ngen der Schweizer Informatikgeschichte},
+  year        = {2011},
+}
+
+@Article{neuser2008erstellung,
+  author  = {Neuser, Jens},
+  journal = {Bachelorarbeit, Universit{\"a}t Siegen},
+  title   = {Erstellung einer Testumgebung f{\"u}r das digitale Ausleseboard der AMIGA Elektronik},
+  year    = {2008},
+}
+
+@Article{rigotti2003digitale,
+  author = {Rigotti, Mattia},
+  title  = {Digitale Elektronik},
+  year   = {2003},
+}
+
 @Article{konradz1z2,
   author    = {Rojas, Ra{\'u}l},
   journal   = {IEEE Annals of the History of Computing},
@@ -9,13 +29,6 @@
   publisher = {IEEE},
 }
 
-@TechReport{bruderer2011konrad,
-  author      = {Bruderer, Herbert},
-  institution = {ETH Zurich},
-  title       = {Konrad Zuse und die Schweiz: Relaisrechner Z4 an der ETH Z{\"u}rich: Rechenlocher M9 f{\"u}r die Schweizer Remington Rand: Eigenbau des R{\"o}hrenrechners ERMETH: Zeitzeugenbericht zur Z4: unbekannte Dokumente zur M9: ein Beitrag zu den Anf{\"a}ngen der Schweizer Informatikgeschichte},
-  year        = {2011},
-}
-
 @Book{zimmermann1998binary,
   author    = {Zimmermann, Reto},
   publisher = {Citeseer},
@@ -23,10 +36,13 @@
   year      = {1998},
 }
 
-@Article{rigotti2003digitale,
-  author = {Rigotti, Mattia},
-  title  = {Digitale Elektronik},
-  year   = {2003},
-}
-
 @Comment{jabref-meta: databaseType:bibtex;}
+
+@Comment{jabref-meta: saveActions:disabled;
+all-text-fields[identity]
+date[normalize_date]
+month[normalize_month]
+pages[normalize_page_numbers]
+;}
+
+@Comment{jabref-meta: saveOrderConfig:specified;author;false;title;false;}
